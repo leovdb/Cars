@@ -17,8 +17,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# AI files
+# image files
 *.ai
+*.jpg
+*.gif
+*.png
 
 # =========================
 # Operating System Files
