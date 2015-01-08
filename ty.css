@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+
+html {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: #06F;
+	background-image: url(img/ty.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+body {
+	font-family: "Ubuntu", sans-serif;
+	color: #FFF;
+	margin: 0px;
+}
+h1 {
+	font-size: 50px;
+}
+h2 {
+	font-size: 24px;
+}
+
+
+#main-container {
+	width: 100%;
+}
+
+#text-container {
+	text-align: center;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	/* [disabled]padding-top: 50px; */
+	width: 750px;
+	padding: 25px;
+	/* [disabled]background-color: #6CF; */
+	border-radius: 10px;
+	/* [disabled]opacity: 0.5; */
+	background: rgba(102,102,102,0.75);
+}
+a {
+	color: #FFF;
+}
