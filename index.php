@@ -189,7 +189,7 @@
   	<div class="mobile-highlight">
         
         <div class="whyus-summary">
-    		If you sell to a dealer, rather than another driver, you will get less money for your car.
+    		Selling to a dealer won't get you the best price.<br /> Selling your car yourself, direct to another driver, will get you more money.
     	</div>
         
 	</div>
@@ -199,14 +199,14 @@
 	</div>
     
     <div class="whyus-block1-example">
-        <p>Typically, a dealer will pay</p>
-        <p class="whyus-callout" id="whyus-block1-example-callout1">10-15% less</p>
-        <p>than another driver will.</p>
+        <p>Another driver will typically pay</p>
+        <p class="whyus-callout" id="whyus-block1-example-callout1">10-20% more</p>
+        <p>than a dealer.</p>
     </div>
     <div class="whyus-block1-example">
-        <p>And WeBuyAnyCar will pay up to</p>
-        <p class="whyus-callout" id="whyus-block1-example-callout2">30% less</p>
-        <p>than another driver will.</p>
+        <p>And they'll pay up to</p>
+        <p class="whyus-callout" id="whyus-block1-example-callout2">40% more</p>
+        <p>than WeBuyAnyCar will.</p>
     </div>
     
     
@@ -218,7 +218,7 @@
 
   	<div class="mobile-highlight">
         <div class="whyus-summary">
-            But selling your car yourself involves a lot of hassle...
+            But selling your car yourself is a hassle...
         </div>
 	</div>
     
@@ -290,7 +290,7 @@
 	
     <div class="mobile-highlight">
         <div class="whyus-block3-LHS">
-            ...and people can be wary of buying from an individual
+            ...and another driver may be wary of buying from someone they don't know
 		</div>
     </div>
     
@@ -312,7 +312,7 @@
 	<div class="mobile-highlight">
         <div class="whyus-summary">
             <p>We sell your car to another driver, at a price we agree with you, taking care of all the hassle for you and providing peace of mind for them.</p>
-            <p id="enable-cta">You'll get less stress and more money.</p>
+            <p id="enable-cta">You'll get more money and no fuss.</p>
         </div>
 	</div>    
     
