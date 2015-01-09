@@ -13,6 +13,11 @@
 	<!-- Tablets and above -->
 	<link href="ty.css" rel="stylesheet" type="text/css" media="only screen and (min-width:768px)" />
 	
+	<!--[if lt IE 9]>
+    <link href="ty.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+    
+	
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -1,8 +1,8 @@
 @charset "utf-8";
 /* Phone */
-@import url("phone.css") only screen and (min-width:0px) and (max-width:767px);
+/*@import url("phone.css") only screen and (min-width:0px) and (max-width:767px);
 
-@media (min-width: 768px) {
+@media (min-width: 768px) {*/
 #call-to-action {
 	font-size: 20px;
 	/* [disabled]color: #FFF; */
@@ -438,6 +438,18 @@ a.welcome-links:hover {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding-left: 0px;
+	
+	/* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=0);
+
+  /* Netscape */
+  -moz-opacity: 0;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0;
 }
 .mobile-only {
 	display: none;
@@ -655,4 +667,4 @@ body {
     .navbar .navbar-collapse {
         text-align: center;
     }
-}
+/*}*/

@@ -105,7 +105,16 @@ We can handle the hassle for you. So you get a fair price, without the fuss."
        
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    	
+	<!-- Phones -->
+	<link href="phone.css" rel="stylesheet" type="text/css" media="only screen and (min-width:0px) and (max-width:767px)" />
+	<!-- Tablets and above -->
+	<link href="styles.css" rel="stylesheet" type="text/css" media="only screen and (min-width:768px)" />
+	
+	<!--[if lt IE 9]>
     <link href="styles.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+   
 	
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -623,9 +632,9 @@ We also have every car inspected by the AA and give its report, along with a bac
       
   <hr>
 
-  <footer>
+  <div>
         <p>&copy; Driven Cars Limited 2015</p>
-  </footer>
+  </div>
   
 <!--
 </div>
