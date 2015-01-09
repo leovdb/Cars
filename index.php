@@ -560,14 +560,14 @@ We also have every car inspected by the AA and give its report, along with a bac
  
   	<p class="header-sm-text">Like the sound of it? Then...</p>
     
-  	<H1 class="header-h1">Register with us</H1>
+  	<H1 class="header-h1">Let's get started</H1>
     
 </div>
 
 <div class="section-container" id="register-header">
 
 	<div class="register-header mobile-highlight">
-    	If you are interested in selling your car with us, please complete this form and we will get back to you. We need all the information, so please fill in every box.
+    	If you’re interested, just fill in this form and we’ll get back to you. We need all the details, so make sure you don’t leave any blanks...
 	</div>
 
 </div>
@@ -581,10 +581,10 @@ We also have every car inspected by the AA and give its report, along with a bac
             <p class="register-form-headings">About your car:</p>
                 
 			<div class="register-form-label">Registration number:</div>
-			<input name="reg" type="text" id="register-form-reg" class="r1" placeholder="REG #" maxlength="8" data-parsley-required />
+			<input name="reg" type="text" id="register-form-reg" class="r1" placeholder="Written on the car. Twice" maxlength="8" data-parsley-required />
                 
 			<div class="register-form-label">Current mileage:</div>
-			<input name="mileage" type="text" id="register-form-mileage" class="r1" placeholder="MILEAGE" maxlength="9" data-parsley-required data-parsley-type="number"/>
+			<input name="mileage" type="text" id="register-form-mileage" class="r1" placeholder="The miles on the clock" maxlength="9" data-parsley-required data-parsley-type="number"/>
 		</div>
 		
       <div class="register-form-section" id="r2-s">
@@ -592,10 +592,10 @@ We also have every car inspected by the AA and give its report, along with a bac
 			<p class="register-form-headings">About you:</p>
             
 			<div class="register-form-label">Your email address:</div>
-			<input name="email" type="text" id="register-form-email" class="r2" placeholder="EMAIL" data-parsley-required data-parsley-type="email"/>
+			<input name="email" type="text" id="register-form-email" class="r2" placeholder="How we get in touch" data-parsley-required data-parsley-type="email"/>
                 
 			<div class="register-form-label">Your name:</div>
-			<input name="name" type="text" id="register-form-name" class="r2" placeholder="NAME" data-parsley-required/>
+			<input name="name" type="text" id="register-form-name" class="r2" placeholder="What we should call you" data-parsley-required/>
 		</div>   
 		        
       <div class="register-form-section" id="r3-s">
@@ -603,7 +603,7 @@ We also have every car inspected by the AA and give its report, along with a bac
 			<p class="register-form-headings">Where your car lives:</p>
             
 			<div class="register-form-label">Your postcode:</div>
-			<input name="postcode" type="text" id="register-form-postcode" class="r3" placeholder="POSTCODE" data-parsley-required />
+			<input name="postcode" type="text" id="register-form-postcode" class="r3" placeholder="Where we come to" data-parsley-required />
             			
 		</div>   
 		<div class="register-form-submit-section">
