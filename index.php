@@ -97,6 +97,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
+	<meta name="description" content="Get a better deal for your car.
+Selling to a dealer won’t get you the best price. You get more money by selling to another driver – but it's a hassle.
+We can handle the hassle for you. So you get a fair price, without the fuss."
+	
     <link rel="shortcut icon" href="img/favicon.ico" />
        
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -152,7 +156,7 @@
     
 <div class="welcome-container" id="welcome-header">
 
-	<img src="img/welcome-car.jpg" width="768" height="301" id="welcome-car-img" alt="Welcome-background" />
+	<img src="img/welcome-car.jpg" width="3000" height="1175" id="welcome-car-img" alt="Welcome-background" />
     
     <div class="intro-heading-text">
     	

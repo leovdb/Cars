@@ -456,7 +456,7 @@ a.welcome-links:hover {
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	clip: rect(auto,1498px,auto,auto);
+	clip: rect(auto,auto,auto,auto);
 }
 
 #laptop-background {
