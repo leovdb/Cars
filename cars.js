@@ -70,7 +70,9 @@ $(".steps-text").mouseleave(function(){
 	
 });
 
-$(".internal-link").click(function(){
+$(".internal-link").click(function(e){
+	
+	e.preventDefault();
 	
 	var target = $(this).attr('href');
 		
@@ -88,8 +90,9 @@ $(".internal-link").click(function(){
 	//Scroll to the top of the target item
 	$('html, body').animate({
 			scrollTop: ($(target).offset().top + heightAdjustment)
-		}, 2000);
+		}, 2000,"swing",checkCallToAction());
 		
+	
 });
 
 $('#menu-list').on('hidden.bs.collapse', function () {
@@ -187,6 +190,41 @@ $(window).resize(function(e) {
 	
 	resizeCarImg();
 	
+});
+
+var ctaIsVisible = false;
+
+function checkCallToAction()
+{
+	//Display the call to action button once the relevant item is visible
+	 
+	 var windowBottom;
+			
+	if($('body').scrollTop() > 0)
+	{
+		windowBottom = $('body').scrollTop() + $(window).height();
+	}
+	else
+	{
+		windowBottom = $('html').scrollTop() + $(window).height();
+	}
+	
+	var ctaShouldBeVisible = windowBottom > $('#enable-cta').offset().top;
+    
+	if (ctaShouldBeVisible && !ctaIsVisible) {
+          ctaIsVisible = true;
+          $('#call-to-action').fadeIn(500);
+    } else if (ctaIsVisible && !ctaShouldBeVisible) {
+          ctaIsVisible = false;
+          $('#call-to-action').fadeOut(500);
+    }
+	
+};
+
+$(window).scroll(function(){
+     
+	checkCallToAction();
+	 
 });
 
 $(document).ready(function() {

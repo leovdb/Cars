@@ -3,6 +3,34 @@
 @import url("phone.css") only screen and (min-width:0px) and (max-width:767px);
 
 @media (min-width: 768px) {
+#call-to-action {
+	font-size: 20px;
+	/* [disabled]color: #FFF; */
+	background-color: #3C3;
+	padding: 10px;
+	position: fixed;
+	right: 25px;
+	bottom: 25px;
+	border-radius: 5px;
+	z-index: 999;
+	display: none;
+	/* [disabled]opacity: 0; */
+}
+.call-to-action-link:link {
+	color: #FFF;
+	text-decoration:none;
+}
+
+.call-to-action-link:visited {
+	color: #FFF;
+	text-decoration:none;
+}
+
+.call-to-action-link:hover {
+	color: #FFF;
+	text-decoration:none;
+}
+
 .intro-heading {
 	color: #06F;
 	position: absolute;
@@ -15,6 +43,8 @@
 	padding-bottom: 25px;
 	padding-left: 25px;
 }
+
+
 .intro-heading-text {
 	color: #FFF;
 	position: absolute;

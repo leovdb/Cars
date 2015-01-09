@@ -53,7 +53,7 @@
       // else nothing and proceed to represent form below
       if( $name_error === NULL & $email_error === NULL )
       {
-         $to       = "leo.vanderborgh@gmail.com";
+         $to       = "leo@driven-cars.com";
          $subject  = "Website registration";
          
 		 $message .= "Name: ".$name."\r\n";
@@ -118,6 +118,11 @@
 
 <body>
 
+<div id="call-to-action">
+
+	<a class="internal-link call-to-action-link" href="#register-header">Get me a quote</a>
+
+</div>
 
 <!-- Fixed navbar -->
 <div class="navbar navbar-default navbar-fixed-top" id="top-navbar" role="navigation">
@@ -138,7 +143,7 @@
 				<li><a class="internal-link" href="#whyus-header">Why use us?</a></li>
 				<li><a class="internal-link" href="#steps-header">How does it work?</a></li>
                 <li><a class="internal-link" href="#FAQ-header">Questions?</a></li>
-                <li><a class="internal-link" href="#register-header">Register with us</a></li>
+                <li><a class="internal-link" href="#register-header">Get me a quote</a></li>
             
           	</ul>
 		</div><!--/.nav-collapse -->
@@ -156,11 +161,11 @@
         <h3 class="intro-heading-lower">We can handle the hassle for you. So you get a fair price, without the fuss.</h3>
     
     	<div class="intro-findoutmore">
-        	<a class="internal-link welcome-links" href="#whyus-header">Find out more &gt;</a>
+        	<a class="internal-link welcome-links" href="#whyus-header">Tell me more &gt;</a>
       	</div>
         
       <div class="intro-register">
-        	<a class="internal-link welcome-links" href="#register-header">Register to sell your car &gt;</a>
+        	<a class="internal-link welcome-links" href="#register-header">Get me a quote &gt;</a>
       	</div>
     
     </div>	
@@ -307,7 +312,7 @@
 	<div class="mobile-highlight">
         <div class="whyus-summary">
             <p>We sell your car to another driver, at a price we agree with you, taking care of all the hassle for you and providing peace of mind for them.</p>
-            <p>You'll get less stress and more money.</p>
+            <p id="enable-cta">You'll get less stress and more money.</p>
         </div>
 	</div>    
     
@@ -609,14 +614,13 @@ We also have every car inspected by the AA and give its report, along with a bac
   
 </div>
 
-<div class="spacer"></div>
 
 
       
   <hr>
 
   <footer>
-        <p>&copy; Company 2014</p>
+        <p>&copy; Driven Cars Limited 2015</p>
   </footer>
   
 <!--
