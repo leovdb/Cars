@@ -76,6 +76,18 @@ $(".internal-link").click(function(e){
 	
 	var target = $(this).attr('href');
 		
+	if($(this).hasClass('call-to-action-link'))
+	{
+		ga('send', 'event', 'Link', 'Click', 'CTA');
+				
+	}
+	else
+	{
+		ga('send', 'event', 'Link', 'Click', target);
+		
+	}
+	
+		
 	//Adjust the target by the height of the navbar. Necessary to subtract (add) the height
 	//of the mobile menu if it is being displayed (counts as part of the navbar
 	
@@ -149,7 +161,9 @@ $(".FAQ-q").click(function(){
 					scrollTop: scrollPos
 				}, 300);	
 			}
-							
+			
+			ga('send', 'event', 'FAQ', 'Click', qID);
+									
 			});
 		}
 	
@@ -194,6 +208,12 @@ $(window).resize(function(e) {
 
 var ctaIsVisible = false;
 
+var gaScrollWhyUs = false;
+var gaScrollHow = false;
+var gaScrollQuestions = false;
+var gaScrollQuote = false;
+var gaScrollCTA = false;
+
 function checkCallToAction()
 {
 	//Display the call to action button once the relevant item is visible
@@ -214,6 +234,11 @@ function checkCallToAction()
 	if (ctaShouldBeVisible && !ctaIsVisible) {
           ctaIsVisible = true;
           $('#call-to-action').fadeIn(500);
+		  if(!gaScrollCTA){
+			ga('send', 'event', 'Page', 'Scroll', 'CTA');
+		
+			gaScrollCTA = true;  
+		  }
     } else if (ctaIsVisible && !ctaShouldBeVisible) {
           ctaIsVisible = false;
           $('#call-to-action').fadeOut(500);
@@ -221,9 +246,45 @@ function checkCallToAction()
 	
 };
 
+
+function checkAnalyticScrollEvents()
+{
+	bottom = $(window).height() + $(window).scrollTop();
+	height = $(document).height();
+	
+	effectiveTop = $(window).scrollTop() + $('#top-navbar').height();
+	
+	if((effectiveTop >= $('#whyus-header').offset().top) && !gaScrollWhyUs)
+	{
+		ga('send', 'event', 'Page', 'Scroll', 'Why Us');
+		gaScrollWhyUs = true;
+	}
+	
+	if((effectiveTop >= $('#steps-header').offset().top) && !gaScrollHow)
+	{
+		ga('send', 'event', 'Page', 'Scroll', 'How it works');
+		gaScrollHow = true;
+	}
+	
+	if((effectiveTop >= $('#FAQ-header').offset().top) && !gaScrollQuestions)
+	{
+		ga('send', 'event', 'Page', 'Scroll', 'FAQs');
+		gaScrollQuestions = true;
+	}
+	
+	if((bottom >= $('#register-form-button').offset().top) && !gaScrollQuote)
+	{
+		ga('send', 'event', 'Page', 'Scroll', 'Register');
+		gaScrollQuote = true;
+	}
+	
+};
+
 $(window).scroll(function(){
      
 	checkCallToAction();
+	
+	checkAnalyticScrollEvents();
 	 
 });
 

@@ -611,7 +611,7 @@ We also have every car inspected by the AA and give its report, along with a bac
             			
 		</div>   
 		<div class="register-form-submit-section">
-       	  <input name="register" type="submit" value="Register" />
+       	  <input name="register" type="submit" id="register-form-button" value="Register" />
         </div>
         
 	</form>
