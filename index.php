@@ -569,7 +569,7 @@ We also have every car inspected by the AA and give its report, along with a bac
 
 </div>
 
-<div class="section-header">
+<div class="section-header" id="register-header-title">
  
   	<p class="header-sm-text">Like the sound of it? Then...</p>
     

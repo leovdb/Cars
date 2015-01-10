@@ -248,7 +248,7 @@ function checkCallToAction()
 		windowBottom = $('html').scrollTop() + $(window).height();
 	}
 	
-	var ctaShouldBeVisible = (windowBottom > $('#enable-cta').offset().top) && (windowTop < $('.register-header').offset().top);
+	var ctaShouldBeVisible = (windowBottom > $('#enable-cta').offset().top) && (windowTop < $('#register-header-title').offset().top);
     
 	if (ctaShouldBeVisible && !ctaIsVisible) {
           ctaIsVisible = true;
