@@ -235,17 +235,20 @@ function checkCallToAction()
 	//Display the call to action button once the relevant item is visible
 	 
 	 var windowBottom;
+	 var windowTop;
 			
 	if($('body').scrollTop() > 0)
 	{
+		windowTop = $('body').scrollTop() + $('#top-navbar').height();
 		windowBottom = $('body').scrollTop() + $(window).height();
 	}
 	else
 	{
+		windowTop = $('html').scrollTop() + $('#top-navbar').height();
 		windowBottom = $('html').scrollTop() + $(window).height();
 	}
 	
-	var ctaShouldBeVisible = windowBottom > $('#enable-cta').offset().top;
+	var ctaShouldBeVisible = (windowBottom > $('#enable-cta').offset().top) && (windowTop < $('.register-header').offset().top);
     
 	if (ctaShouldBeVisible && !ctaIsVisible) {
           ctaIsVisible = true;
