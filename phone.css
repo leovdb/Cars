@@ -402,6 +402,13 @@ a.welcome-links:hover {
 	padding-bottom: 15px;
 	text-align: center;
 }
+.register-header-small {
+	font-size: 12px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
 .register-form-label {
 }
 

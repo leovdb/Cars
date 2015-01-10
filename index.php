@@ -171,7 +171,7 @@ We can handle the hassle for you. So you get a fair price, without the fuss."
     	
         <h1 class="intro-heading-higher">Get a better deal for your car.</h1>
 		<h3 class="intro-heading-lower">Selling to a dealer won’t get you the best price. You get more money by selling to another driver – but it's a hassle.</h3>
-        <h3 class="intro-heading-lower">We can handle the hassle for you. So you get a fair price, without the fuss.</h3>
+        <h3 class="intro-heading-lower">If you're in London, we can handle the hassle for you. So you get a fair price, without the fuss.</h3>
     
     	<div class="intro-findoutmore">
         	<a class="internal-link welcome-links" href="#whyus-header">Tell me more &gt;</a>
@@ -580,7 +580,10 @@ We also have every car inspected by the AA and give its report, along with a bac
 <div class="section-container" id="register-header">
 
 	<div class="register-header mobile-highlight">
-    	If you’re interested, just fill in this form and we’ll get back to you. We need all the details, so make sure you don’t leave any blanks...
+    	If you’re interested and based in London, just fill in this form and we’ll get back to you. We need all the details, so make sure you don’t leave any blanks...
+	</div>
+	<div class="register-header-small">
+		If you're not in London, sorry we can't help this time. We hope to be working in other parts of the UK soon. In the meantime, we can give you some tips on how to get the best price for your car - just <a href="mailto:hello@driven-cars.com?subject=Can you give me some tips">drop us a line</a>.
 	</div>
 
 </div>

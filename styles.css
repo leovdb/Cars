@@ -588,7 +588,7 @@ input {
 }
 .register-form-submit-section {
 	clear: both;
-	padding-top: 25px;
+	padding-top: 0px;
 	padding-bottom: 25px;
 	padding-left: 25px;
 	margin-left: 490px;
@@ -627,14 +627,25 @@ input {
 	margin-bottom: 5px;
 }
 .register-header {
-	font-size: 20px;
-	margin-top: 25px;
+	font-size: 18px;
+	/* [disabled]margin-top: 15px; */
 	width: 750px;
-	float: left;
+	/* [disabled]float: left; */
 	padding-right: 25px;
 	padding-left: 25px;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
+	padding-top: 15px;
 }
+.register-header-small {
+	font-size: 14px;
+	margin-top: 15px;
+	width: 750px;
+	/* [disabled]float: left; */
+	padding-right: 25px;
+	padding-left: 25px;
+	margin-bottom: 15px;
+}
+
 
 
 
