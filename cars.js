@@ -175,8 +175,18 @@ function resizeCarImg()
 	var containerHeight = Math.floor($(window).height() - $('#top-navbar').height());
 	var containerWidth = $(window).width();
 	
+	var textBottom = Math.floor($('.intro-heading-text').position().top+$('.intro-heading-text').outerHeight(true));
+	
+	if(containerHeight < textBottom)
+	{
+		containerHeight = textBottom;
+	}
+	
+	
 	var carImgHeight;
 	var carImgWidth;
+	var carImgTop;
+	var carImgLeft;
 		
 	if((containerHeight * carImgScalingFactor) >= containerWidth)
 	{
@@ -189,6 +199,9 @@ function resizeCarImg()
 		carImgHeight = Math.floor(carImgWidth / carImgScalingFactor);	
 	}
 	
+	carImgTop = -(carImgHeight - containerHeight) / 2;
+	carImgLeft = -(carImgWidth - containerWidth) / 2;
+	
 	//var carImgClip = "rect(0px," + $(window).width() + "px," + carImgHeight + "px,0px)";
 	
 	$(".welcome-container").height(containerHeight);
@@ -197,7 +210,10 @@ function resizeCarImg()
 	//$("#welcome-car-img").css({ 'clip': carImgClip });
 	$("#welcome-car-img").height(carImgHeight);
 	$("#welcome-car-img").width(carImgWidth);
-			
+	
+	$("#welcome-car-img").css("left",carImgLeft);
+	$("#welcome-car-img").css("top",carImgTop);
+				
 }
 
 $(window).resize(function(e) {

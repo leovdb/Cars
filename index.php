@@ -165,7 +165,7 @@ We can handle the hassle for you. So you get a fair price, without the fuss."
     
 <div class="welcome-container" id="welcome-header">
 
-	<img src="img/welcome-car.jpg" width="3000" height="1175" id="welcome-car-img" alt="Welcome-background" />
+	<img src="img/welcome-road.jpg" width="2560" height="1707" id="welcome-car-img" alt="Welcome-background" />
     
     <div class="intro-heading-text">
     	
