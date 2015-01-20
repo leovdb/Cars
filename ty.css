@@ -25,6 +25,18 @@ h2 {
 	font-size: 24px;
 }
 
+.left-align {
+
+	text-align: left;
+
+}
+
+.small-font {
+
+	font-size: small;
+	font-weight: 300;
+
+}
 
 #main-container {
 	width: 100%;
@@ -36,12 +48,9 @@ h2 {
 	margin-right: auto;
 	margin-bottom: 0px;
 	margin-left: auto;
-	/* [disabled]padding-top: 50px; */
 	width: 750px;
 	padding: 25px;
-	/* [disabled]background-color: #6CF; */
 	border-radius: 10px;
-	/* [disabled]opacity: 0.5; */
 	background: rgba(102,102,102,0.75);
 }
 a {

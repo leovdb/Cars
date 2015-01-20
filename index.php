@@ -623,7 +623,12 @@ We also have every car inspected by the AA and give its report, along with a bac
             			
 		</div>   
 		<div class="register-form-submit-section">
-       	  <input name="register" type="submit" id="register-form-button" value="Register" />
+       	  	<div id="register-form-button-wrapper">
+		  		<input name="register" type="submit" id="register-form-button" value="Let's go" />
+				<div class="register-bubble" id="register-bubble-1"></div>
+				<div class="register-bubble" id="register-bubble-2"></div>
+				<div class="register-bubble" id="register-bubble-3">Vroom</div>
+			</div>
         </div>
         
 	</form>
@@ -636,7 +641,7 @@ We also have every car inspected by the AA and give its report, along with a bac
   <hr>
 
   <div>
-        <p>&copy; Driven Cars Limited 2015</p>
+        <p>&copy; Driven Cars Limited 2015 &nbsp;&nbsp;&nbsp;<a href="privacy.html" target="_blank">Privacy policy</a></p>
   </div>
   
 <!--

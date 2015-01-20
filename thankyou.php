@@ -40,7 +40,7 @@
         </h1>
         
         <h2>
-        	We will be in touch within 24 hours. If you have any questions in the meantime, please <a href="mailto:hello@driven.io">email us</a>
+        	We will be in touch within 24 hours. If you have any questions in the meantime, please <a href="mailto:hello@driven-cars.com">email us</a>
         </h2>
         
         <p><a href="index.php">Return to our homepage</a></p>

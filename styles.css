@@ -570,6 +570,11 @@ input {
 	width: 175px;
 	border-radius: 4px;
 }
+
+
+
+
+
 .register-form {
 	width: 750px;
 	clear: both;
@@ -625,6 +630,46 @@ input {
 	color: #333;
 	margin-top: 10px;
 	margin-bottom: 5px;
+}
+#register-form-button-wrapper {
+	width: 175px;
+	position: relative;
+}
+.register-bubble {
+	background-color: #06F;
+	position: absolute;
+	display: none;
+}
+#register-bubble-1 {
+	height: 6px;
+	width: 6px;
+	top: -8px;
+	/* [disabled]right: 0px; */
+	border-radius: 3px;
+	left: 84px;
+	opacity: 0.33;
+}
+#register-bubble-2 {
+	height: 12px;
+	width: 12px;
+	top: -22px;
+	/* [disabled]right: -14px; */
+	border-radius: 6px;
+	left: 92px;
+	opacity: 0.66;
+}
+#register-bubble-3 {
+	height: 24px;
+	/* [disabled]width: 12px; */
+	top: -48px;
+	/* [disabled]right: -14px; */
+	border-radius: 12px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #FFF;
+	padding-right: 6px;
+	padding-left: 6px;
+	left: 106px;
 }
 .register-header {
 	font-size: 18px;

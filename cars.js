@@ -222,6 +222,55 @@ $(window).resize(function(e) {
 	
 });
 
+function animateInRegister()
+{
+	
+	$('.register-bubble').stop(true);
+	
+	$('#register-bubble-1').fadeIn(500, 'swing', function(){
+		$('#register-bubble-2').fadeIn(500, 'swing', function(){
+			$('#register-bubble-3').fadeIn(500)})
+	});	
+	
+};
+
+function animateOutRegister()
+{
+	
+	$('.register-bubble').stop(true);
+	
+	$('#register-bubble-3').fadeOut(500, 'swing', function(){
+		$('#register-bubble-2').fadeOut(500, 'swing', function(){
+			$('#register-bubble-1').fadeOut(500)})
+	});	
+	
+};
+
+$("#register-form-button").mouseenter(function(){
+	
+	//animateInRegister();
+	
+});
+
+$("#register-form-button").mouseleave(function(){
+
+	//animateOutRegister();
+	
+});
+
+$("#register-form-button").focusin(function(){
+	
+	//animateInRegister();
+	
+});
+
+$("#register-form-button").focusout(function(){
+
+	//animateOutRegister();
+	
+});
+
+
 var ctaIsVisible = false;
 
 var gaScrollWhyUs = false;

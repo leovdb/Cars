@@ -33,6 +33,17 @@ h2 {
 	font-size: 14px;
 }
 
+.left-align {
+
+	text-align: left;
+
+}
+
+.small-font {
+
+	font-size: 10px;
+
+}
 
 #main-container {
 	width: 100%;

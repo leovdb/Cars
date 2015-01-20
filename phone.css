@@ -439,3 +439,7 @@ a.welcome-links:hover {
 .register-form-submit-section {
 	margin-top: 10px;
 }
+
+.register-bubble {
+	display: none !important;
+}
