@@ -402,6 +402,59 @@ a.welcome-links:hover {
 	padding-bottom: 15px;
 	text-align: center;
 }
+input {
+	font-size: 12px;
+	color: #000;
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	border: 1px solid #333;
+	width: 175px;
+	border-radius: 4px;
+}
+
+select {
+	font-size: 12px;
+	color: #000;
+	margin: 0px;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	border: 1px solid #333;
+	width: 175px;
+	border-radius: 4px;
+}
+
+.empty {
+	color: gray;
+}
+#condition-popup {
+	padding: 5px;
+	width: 100%;
+	background-color: #FFF;
+	border: medium solid #999;
+	/* [disabled]position: absolute; */
+	/* [disabled]left: 200px; */
+	z-index: 999;
+	border-radius: 5px;
+	color: #333;
+	/* [disabled]bottom: 0px; */
+	display: none;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#condition-popup-header {
+	font-size: 10px;
+}
+.condition-popup-p {
+	font-size: 9px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
 .register-header-small {
 	font-size: 12px;
 	padding-top: 15px;
@@ -435,11 +488,20 @@ a.welcome-links:hover {
 	margin-top: 5px;
 	margin-bottom: 2px;
 }
-
-.register-form-submit-section {
+.register-form-notes {
 	margin-top: 10px;
 }
 
 .register-bubble {
 	display: none !important;
+}
+
+.parsley-required {
+	font-size: 8px !important;
+	padding-top: 2px;
+	color: #06F;
+}
+
+#mobile-indicator {
+	display: block;
 }

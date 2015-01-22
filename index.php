@@ -26,8 +26,8 @@
 	  $postcode = clean_input($_POST["postcode"]);
 	  $reg = clean_input($_POST["reg"]);
 	  $mileage = clean_input($_POST["mileage"]);
-
-
+	  $condition = clean_input($_POST["condition"]);
+	  $phone = clean_input($_POST["phone"]);
 
       // various rules go here
       // this one reflects that name is required
@@ -60,7 +60,9 @@
          $message .= "Email: ".$email."\r\n";
 		 $message .= "Reg #: ".$reg."\r\n";
 		 $message .= "Mileage: ".$mileage."\r\n";
+		 $message .= "Condition: ".$condition."\r\n";
 		 $message .= "Postcode: ".$postcode."\r\n";
+		 $message .= "Phone: ".$phone."\r\n";
 		 
          $headers  = "From: leo@driven-cars.com"."\r\n"."Reply-To: leo@driven-cars.com";
 
@@ -580,7 +582,7 @@ We also have every car inspected by the AA and give its report, along with a bac
 <div class="section-container" id="register-header">
 
 	<div class="register-header mobile-highlight">
-    	If you’re interested and based in London, just fill in this form and we’ll get back to you. We need all the details, so make sure you don’t leave any blanks...
+    	If you’re interested and based in London, just fill in this form and we’ll get back to you.
 	</div>
 	<div class="register-header-small">
 		If you're not in London, sorry we can't help this time. We hope to be working in other parts of the UK soon. In the meantime, we can give you some tips on how to get the best price for your car - just <a href="mailto:hello@driven-cars.com?subject=Can you give me some tips">drop us a line</a>.
@@ -592,47 +594,78 @@ We also have every car inspected by the AA and give its report, along with a bac
 
 	<form action="index.php" method="post" name="register-form" class="register-form" data-parsley-validate>
         
-	  <div class="register-form-section" id="r1-s">
+	  	<div class="register-form-section" id="r1-s">
 			<H2 class="register-form-number">1.</H2>
             <p class="register-form-headings">About your car:</p>
                 
-			<div class="register-form-label">Registration number:</div>
-			<input name="reg" type="text" id="register-form-reg" class="r1" placeholder="Written on the car. Twice" maxlength="8" data-parsley-required />
+			<div class="register-form-label">Registration number*:</div>
+			<input name="reg" type="text" id="register-form-reg" class="r1" placeholder="Written on the car. Twice" maxlength="8" data-parsley-required data-parsley-required-message="We need this to tell what car you have" />
                 
-			<div class="register-form-label">Current mileage:</div>
-			<input name="mileage" type="text" id="register-form-mileage" class="r1" placeholder="The miles on the clock" maxlength="9" data-parsley-required data-parsley-type="number"/>
+			<div class="register-form-label">Current mileage*:</div>
+			<input name="mileage" type="text" id="register-form-mileage" class="r1" placeholder="The miles on the clock" maxlength="9" data-parsley-required data-parsley-type="number" data-parsley-required-message="We need this to know how much it's worth"/>
+			
+			<div class="register-form-label">Condition*:</div>
+			<div id="register-form-condition-wrapper">
+				<div id="condition-popup">
+				<span id="condition-popup-header">Your car's condition affects how much cash you'll get. Here's how we work:</span>
+				<p class="condition-popup-p"><strong>Clark Gable: it's a handsome screen idol.</strong> It's got no scrapes or scratches, there are no mechanical problems and you've got a full service history.</p>
+				<p class="condition-popup-p"><strong>Marlon Brando: it's not perfect, but it's pretty close.</strong> It's got the odd scratch or bump, but everything mechanical works well and you've got a full service history to prove it.</p>
+				<p class="condition-popup-p"><strong>Paul Newman: it's lived a little, and you both know it.</strong> It's got a few scratches. It's missing a bit of paint or has one or two mechanical issues, but at least you've got a full service history.</p>
+				<p class="condition-popup-p"><strong>Olly Reed: it's a hellraiser.</strong> It's scratched, there are some mechanical issues you haven't fixed and you're not quite sure where all it's service history is. But it gets you from A to B.</p>
+				</div>
+				
+				<select name="condition" class="empty" id="register-form-condition" data-parsley-required data-parsley-required-message="If you're not sure, go for Paul Newman">
+					
+					<option value="" disabled selected style='display:none;'>The state it's in</option>
+					<option value="Excellent">Clark Gable</option>
+					<option value="Good">Marlon Brando</option>
+					<option value="Average">Paul Newman</option>
+					<option value="Poor">Olly Reed</option>
+					
+				</select>
+				
+			</div>
+						
 		</div>
 		
       <div class="register-form-section" id="r2-s">
 			<H2 class="register-form-number">2.</H2>
 			<p class="register-form-headings">About you:</p>
             
-			<div class="register-form-label">Your email address:</div>
-			<input name="email" type="text" id="register-form-email" class="r2" placeholder="How we get in touch" data-parsley-required data-parsley-type="email"/>
-                
-			<div class="register-form-label">Your name:</div>
-			<input name="name" type="text" id="register-form-name" class="r2" placeholder="What we should call you" data-parsley-required/>
+			<div class="register-form-label">Your email address*:</div>
+			<input name="email" type="text" id="register-form-email" class="r2" placeholder="How we get in touch" data-parsley-required data-parsley-type="email" data-parsley-required-message="We need to be able to contact you"/>
+			
+			<div class="register-form-label">Your name*:</div>
+			<input name="name" type="text" id="register-form-name" class="r2" placeholder="What we should call you" data-parsley-required data-parsley-required-message="We need to know what to call you"/>
+			
+			<div class="register-form-label">Your postcode*:</div>
+			<input name="postcode" type="text" id="register-form-postcode" class="r3" placeholder="Where we come to" data-parsley-required data-parsley-required-message="We need to know we can come to you" />
+			
+			<div class="register-form-label">Your phone number:</div>
+			<input name="phone" type="text" id="register-form-phone" class="r2" placeholder="We won't prank call you" />
+			
 		</div>   
 		        
       <div class="register-form-section" id="r3-s">
 			<H2 class="register-form-number">3.</H2>
-			<p class="register-form-headings">Where your car lives:</p>
+			<p class="register-form-headings">Finished?</p>
             
-			<div class="register-form-label">Your postcode:</div>
-			<input name="postcode" type="text" id="register-form-postcode" class="r3" placeholder="Where we come to" data-parsley-required />
-            			
-		</div>   
-		<div class="register-form-submit-section">
-       	  	<div id="register-form-button-wrapper">
+			<div class="register-form-label">&nbsp;</div>
+            <div id="register-form-button-wrapper">
 		  		<input name="register" type="submit" id="register-form-button" value="Let's go" />
-				<div class="register-bubble" id="register-bubble-1"></div>
+				<!--<div class="register-bubble" id="register-bubble-1"></div>
 				<div class="register-bubble" id="register-bubble-2"></div>
-				<div class="register-bubble" id="register-bubble-3">Vroom</div>
+				<div class="register-bubble" id="register-bubble-3">Vroom</div>-->
 			</div>
+            			
+		</div>
+				   
+		<div class="register-form-notes">
+       	  	<em>*We need to know this stuff</em>
         </div>
-        
-	</form>
-  
+    	
+		</form>
+		  
 </div>
 
 
@@ -644,6 +677,8 @@ We also have every car inspected by the AA and give its report, along with a bac
         <p>&copy; Driven Cars Limited 2015 &nbsp;&nbsp;&nbsp;<a href="privacy.html" target="_blank">Privacy policy</a></p>
   </div>
   
+  <div id="mobile-indicator"></div>
+  
 <!--
 </div>
 -->
@@ -651,6 +686,14 @@ We also have every car inspected by the AA and give its report, along with a bac
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
 <script src="jquery.superscrollorama.js"></script>
+
+<script>
+window.ParsleyConfig = {
+  errorsWrapper: '<div></div>',
+  errorTemplate: '<div></div>'
+};
+</script>
+
 <script src="parsley.min.js"></script>
 
 <script src="cars.js"></script>
