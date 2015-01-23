@@ -97,7 +97,7 @@
 	<title>Driven</title>
 	
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
     
 	<meta name="description" content="Get a better deal for your car.
 Selling to a dealer won’t get you the best price. You get more money by selling to another driver – but it's a hassle.
