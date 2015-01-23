@@ -201,8 +201,16 @@ function scrollToTop(element, margin)
 	}*/
 };
 
+var conditionFocused = false;
+
 $('#register-form-condition').focus(function () {
     
+	if(!conditionFocused)
+	{
+		ga('send', 'event', 'Form', 'Focus', 'condition');
+		conditionFocused = true;
+	}
+	
 	if(isMobileWidth())
 	{
 		$('#condition-popup').stop()
@@ -216,6 +224,21 @@ $('#register-form-condition').focus(function () {
 		
 		$('#condition-popup').css('bottom',popupBottomS);
 		$('#condition-popup').css('z-index','999');
+	}
+	
+});
+
+$('#register-form-condition').change(function(e) {
+	
+	if(isMobileWidth())
+	{
+		$('#condition-popup').stop()
+		$('#condition-popup').fadeOut();
+		
+	}
+	else
+	{
+		$('#condition-popup').css('z-index','-999');
 	}
 	
 });
