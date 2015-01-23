@@ -531,6 +531,9 @@ $(document).ready(function() {
 		$(this).css({ top: topPosition + 'px' })
 	});
 
+	//Send event that the page has loaded
+	ga('send', 'event', 'Loaded', 'Page');
+	
 	var controller = $.superscrollorama();
 	
 	var stepsAnimOffset = -($(window).height()/3);
