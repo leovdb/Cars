@@ -432,10 +432,10 @@ We can handle the hassle for you. So you get a fair price, without the fuss."
 <div class="section-container">
 
 	<div class="steps-text steps-text-left" id="steps-3">
-    	<h3 class="steps-header" id="steps-3-header">We find potential buyers
+    	<h3 class="steps-header" id="steps-3-header">We find potential buyers, using the UK's most visited online car marketplace
       <p class="steps-rollover-text">More details...</p></h3>
       <ul class="steps-detail" id="steps-3-detail">
-        	<li>We use eBay to find potential buyers.</li>
+        	<li>We use eBay, which has 12m visitors looking for cars each month, to find potential buyers.</li>
         	<li>We list your car in a way that shows it at its best.</li>
         	<li>We provide potential buyers with additional information that other sellers do not to get a better price (such as the independent AA report).</li>
         </ul>
