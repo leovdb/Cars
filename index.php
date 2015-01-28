@@ -98,6 +98,13 @@
 	
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <meta property="og:site_name" content="Driven"/>
+    <meta property="og:title" content="Get a better deal for your car." />
+    <meta property="og:description" content="We are a new way of selling your car in London. We get you more money than a dealer, without any of the hassle of selling the car yourself." />
+    <meta property="og:url" content="http://www.driven-cars.com" />
+    <meta property="og:image" content="http://www.driven-cars.com/img/welcome-road.jpg">
+    <meta property="fb:admins" content="689595042" />
     
 	<meta name="description" content="Get a better deal for your car.
 Selling to a dealer won’t get you the best price. You get more money by selling to another driver – but it's a hassle.
@@ -611,7 +618,7 @@ We also have every car inspected by the AA and give its report, along with a bac
 				<p class="condition-popup-p"><strong>Clark Gable: it's a handsome screen idol.</strong> It's got no scrapes or scratches, there are no mechanical problems and you've got a full service history.</p>
 				<p class="condition-popup-p"><strong>Marlon Brando: it's not perfect, but it's pretty close.</strong> It's got the odd scratch or bump, but everything mechanical works well and you've got a full service history to prove it.</p>
 				<p class="condition-popup-p"><strong>Paul Newman: it's lived a little, and you both know it.</strong> It's got a few scratches. It's missing a bit of paint or has one or two mechanical issues, but at least you've got a full service history.</p>
-				<p class="condition-popup-p"><strong>Olly Reed: it's a hellraiser.</strong> It's scratched, there are some mechanical issues you haven't fixed and you're not quite sure where all it's service history is. But it gets you from A to B.</p>
+				<p class="condition-popup-p"><strong>Olly Reed: it's a hellraiser.</strong> It's scratched, there are some mechanical issues you haven't fixed and you're not quite sure where all its service history is. But it gets you from A to B.</p>
 				</div>
 				
 				<select name="condition" class="empty" id="register-form-condition" data-parsley-required data-parsley-required-message="If you're not sure, go for Paul Newman">
@@ -697,6 +704,7 @@ window.ParsleyConfig = {
 <script src="parsley.min.js"></script>
 
 <script src="cars.js"></script>
+<script src="http://fast.wistia.net/labs/fresh-url/v1.js" async></script>
 
 
 
