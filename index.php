@@ -524,42 +524,41 @@ We can handle the hassle for you. So you get a fair price, without the fuss."
 	<div class="FAQ-LHS">
     
         <p class="FAQ-q" id="FAQ-q1">Will you sell any car?</p>
-        <p class="FAQ-a" id="FAQ-q1-a">We typically only sell cars with an asking price of more than £7,500. If you are unsure what your car is worth, contact us and we will give you an honest appraisal.</p>
+        <p class="FAQ-a" id="FAQ-q1-a">We usually sell cars with an asking price of more than £7,500. If you’re not sure what yours is worth, get in touch – we can help you to find out.</p>
         
         <p class="FAQ-q" id="FAQ-q2">How much do you cost?</p>
-        <p class="FAQ-a" id="FAQ-q2-a">We take a commission of 5% on the final price your car sells for. If we can't sell your car above the price agreed with you, you don't pay us anything.</p>
+        <p class="FAQ-a" id="FAQ-q2-a">We take a commission of 5% on the final selling price. If we can't sell your car at a price you’re happy with, you don't pay us anything.</p>
         
         <p class="FAQ-q" id="FAQ-q3">Are there any hidden fees?</p>
-        <p class="FAQ-a" id="FAQ-q3-a">No. The commission includes all the fees associated with cleaning, inspecting and listing your car. If we can't sell your car above the price agreed with you, you don't pay us anything.</p>
+        <p class="FAQ-a" id="FAQ-q3-a">Nope. All we take is 5% commission, which includes all the fees for things like cleaning, inspecting and listing your car. If we can't sell your car at a price you’re happy with, you don't pay us anything.</p>
         
         <p class="FAQ-q" id="FAQ-q4">Why should I pay you when I could sell my car myself?</p>
-        <p class="FAQ-a" id="FAQ-q4-a">You absolutely could sell your car yourself, but it involves a lot of hassle. We take this hassle away and still get you a better price than you would selling to a dealership or something like WeBuyAnyCar.<br />
-We also know how to get the best price for your car – taking the right photos, describing the car in an easy to understand way and providing buyers with peace of mind.
+        <p class="FAQ-a" id="FAQ-q4-a">You absolutely could sell your car yourself - but it’s a hassle. We take this hassle away, and still get you a better price than you’d get by selling to a dealership or a site like webuyanycar.<br/>
+Also, we know how to get the best price for your car – by taking the right photos and listing it in the right way, we can show your car at its best. And by inspecting and servicing your car, we can give buyers confidence that they’re getting a great deal.
 </p>
 
-		<p class="FAQ-q" id="FAQ-q5">Can I try to sell my car another way at the same time as using you?</p>
-        <p class="FAQ-a" id="FAQ-q5-a">No. We ask that you give us a month to sell your car at the price we agree. We will ask you to sign a contract to this effect before we start.<br />
-If we can’t sell your car, then you are welcome to try another way (and we can recommend the best ones to you).<br />
-The reason for this is that the services we provide (cleaning, inspecting, checking, photographing etc.) all cost money, and we do this to get you the best price for your car.
+		<p class="FAQ-q" id="FAQ-q5">Can I try to sell my car another way at the same time as using you?  </p>
+        <p class="FAQ-a" id="FAQ-q5-a">No. Once we’ve agreed a minimum selling price, we ask that you give us four weeks to sell your car. We ask you to sign a contract saying that you won’t sell your car any other way during this time.<br/>
+We do this because we’ll pay for things like cleaning and servicing your car – and, once we’ve sold your car, we use part of our commission to cover these costs.<br/>
+However, if we can’t sell your car in four weeks, you’re free to sell your car any way you like – and we won’t charge for any of the cleaning and servicing.
 </p>
         
         <p class="FAQ-q" id="FAQ-q6">When will you come to inspect my car?</p>
-        <p class="FAQ-a" id="FAQ-q6-a">We will arrange a time that is convenient for you. Inspections take 2-3 hours and take place Monday-Friday. If that is not convenient for you, we can collect a spare set of keys to the car at another time and we will handle the inspection. We just need the car to be there!</p>
+        <p class="FAQ-a" id="FAQ-q6-a">The inspections are Monday-Friday and last 3-4 hours. You’re very welcome to be there, but you don’t have to be if you’re too busy – we can collect a spare set of keys and handle everything ourselves.</p>
         
         <p class="FAQ-q" id="FAQ-q7">When will test drives happen?</p>
-        <p class="FAQ-a" id="FAQ-q7-a">We conduct a single test drive day where we get all serious potential buyers to view the car. This will be at a weekend, and we allow half a day in total. You don’t have to be around for this, we can take a spare set of keys. We just need the car to be there!
+        <p class="FAQ-a" id="FAQ-q7-a">We’ll organise a single test drive day where all the serious potential buyers can view your car. This will be at a weekend, and will probably take half a day. Just like the inspections, you don’t have to be around for this – we can collect a spare set of keys and handle everything ourselves.
 </p>
         
         <p class="FAQ-q" id="FAQ-q8">What if someone damages my car when test driving it?</p>
-        <p class="FAQ-a" id="FAQ-q8-a">We will not allow anyone to carry out a test drive without suitable insurance.  Again, we handle all of this, so you don’t have to worry about it.
+        <p class="FAQ-a" id="FAQ-q8-a">We’d never allow anyone to drive your car without the right insurance. We’ll check all of this, so you don’t have to worry about it.
 </p>
 
 		<p class="FAQ-q" id="FAQ-q9">How long will you need access to my car?</p>
-        <p class="FAQ-a" id="FAQ-q9-a">2-3 hours for the initial inspection and half a day for the test drives. You don’t have to be around for this, we can take a spare set of keys. We just need the car to be there.</p>
+        <p class="FAQ-a" id="FAQ-q9-a">We’ll need half a day for the inspection, and another half day for the test drives. You can be around for these things if you like, but you don’t have to be – we can collect a spare set of keys and handle everything ourselves.</p>
         
         <p class="FAQ-q" id="FAQ-q10">How do you get the best price?</p>
-        <p class="FAQ-a" id="FAQ-q10-a">We know how to present your car at its best – we take good photos and we describe it in a way that people can understand.<br />
-We also have every car inspected by the AA and give its report, along with a background check, to potential buyers. That means they know exactly what they’re getting, and have confidence that it is a good car.
+        <p class="FAQ-a" id="FAQ-q10-a">We know how to present your car at its best – we take good photos and we write adverts that are clear and easy to understand. We also have every car inspected by the AA and background-checked by a third party. So, potential buyers know exactly what they’re getting, and can feel confident that they’re getting a good deal.
 </p>
         
         <p class="FAQ-q" id="FAQ-q11">Do I have to deal with the buyers at all?</p>
