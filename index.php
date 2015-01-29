@@ -94,7 +94,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	
-	<title>Driven</title>
+	<title>Sell your car for more money without the hassle | Driven</title>
 	
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
@@ -106,11 +106,9 @@
     <meta property="og:image" content="http://www.driven-cars.com/img/welcome-road.jpg">
     <meta property="fb:admins" content="689595042" />
     
-	<meta name="description" content="Get a better deal for your car.
-Selling to a dealer won’t get you the best price. You get more money by selling to another driver – but it's a hassle.
-We can handle the hassle for you. So you get a fair price, without the fuss."
+	<meta name="description" content="We get you more money than a dealer, without the hassle of selling the car yourself. We're the new way to sell your car in London.">
 	
-    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
        
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
