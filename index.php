@@ -178,7 +178,7 @@
     	
         <h1 class="intro-heading-higher">Get a better deal for your car.</h1>
 		<h3 class="intro-heading-lower">Selling to a dealer won’t get you the best price. You get more money by selling to another driver – but it's a hassle.</h3>
-        <h3 class="intro-heading-lower">If you're in London, we can handle the hassle for you. So you get a fair price, without the fuss.</h3>
+        <h3 class="intro-heading-lower">If you're in London, with a car worth over £10,000, we can handle the hassle for you. So you get a better price, without the fuss.</h3>
     
     	<div class="intro-findoutmore">
         	<a class="internal-link welcome-links" href="#whyus-header">Tell me more &gt;</a>
@@ -337,7 +337,7 @@
 	</div>    
     
     <div class="whyus-block4-footer">
-      <p>We take a 5% commission on the final sale price.</p>
+      	<p>We take a 5% commission on the final sale price.</p>
         <p>So you can expect to get</p>
         <p class="whyus-callout" id="whyus-block4-example-callout">5-25% more</p>
         <p>than selling to a dealer or WeBuyAnyCar</p>
@@ -522,7 +522,7 @@
 	<div class="FAQ-LHS">
     
         <p class="FAQ-q" id="FAQ-q1">Will you sell any car?</p>
-        <p class="FAQ-a" id="FAQ-q1-a">We usually sell cars with an asking price of more than £7,500. If you’re not sure what yours is worth, get in touch – we can help you to find out.</p>
+        <p class="FAQ-a" id="FAQ-q1-a">We usually sell cars with an asking price of more than £10,000. If you’re not sure what yours is worth, get in touch – we can help you to find out. We currently work in London, but we hope to be working in other parts of the UK soon.</p>
         
         <p class="FAQ-q" id="FAQ-q2">How much do you cost?</p>
         <p class="FAQ-a" id="FAQ-q2-a">We take a commission of 5% on the final selling price. If we can't sell your car at a price you’re happy with, you don't pay us anything.</p>
@@ -586,7 +586,7 @@ However, if we can’t sell your car in four weeks, you’re free to sell your c
 <div class="section-container" id="register-header">
 
 	<div class="register-header mobile-highlight">
-    	If you’re interested and based in London, just fill in this form and we’ll get back to you.
+    	If you’re interested, based in London and think your car is worth £10,000 or more, just fill in this form and we’ll get back to you. If you're not sure how much your car is worth, don't worry - fill in the form and we'll let you know.
 	</div>
 	<div class="register-header-small">
 		If you're not in London, sorry we can't help this time. We hope to be working in other parts of the UK soon. In the meantime, we can give you some tips on how to get the best price for your car - just <a href="mailto:hello@driven-cars.com?subject=Can you give me some tips">drop us a line</a>.
