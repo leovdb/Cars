@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+
+h1 {
+	font-size: 72px;
+	
+}
+
+h2 {
+	font-size: 60px;
+	
+}
+
+h3 {
+	font-size: 24px;
+}
+.large-font {
+	font-size: 28px;
+}
+
+#body-container {
+	width: 1400px;
+}
+#hero-header-body {
+	width: 1400px;
+}
+#logo {
+	width: 240px;
+}
+
+
+.circle-callout {
+	height: 200px;
+	width: 180px;
+	border-radius: 100px;
+	font-size: 20px;
+	line-height: 24px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.circles-cell {
+	width: 200px;
+}
+
+.small-circle {
+	height: 20px;
+	width: 20px;
+	border-radius: 10px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+#callout-table {
+	margin-top: 125px;
+	margin-bottom: 125px;
+}
+
+.CTA-button {
+	height: 100px;
+	border-radius: 10px;
+	width: 300px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.CTA-appearance {
+	font-size: 24px;
+}
+
+#CTA-top-table {
+	left: 550px;
+	top: -50px;
+}
+#what-we-do-table {
+	width: 1335px;
+}
+#what-you-do-table {
+	width: 890px;
+}
+
+.descriptor-icon-cell {
+	width: 75px;
+}
+
+.descriptor-text-cell {
+	width: 350px;
+	font-size: 20px;
+}
+
+.descriptor-sub {
+	font-size: 16px;
+}
+
+.descriptor-icon {
+	height: 60px;
+	width: auto;
+}
+.quote {
+	/* [disabled]margin-left: 200px; */
+	/* [disabled]margin-right: 200px; */
+}
+.form-preamble {
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+
+#testamonial-img {
+	height: 150px;
+	width: auto;
+}
+#testamonial-img-cell {
+	width: 150px;
+}
+
+#form-header {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	width: 1000px;
+	font-size: 30px;
+}
+
+#form-body {
+	width: 1000px;
+}
+
+.form-heading-number {
+	font-size: 48px;
+}
+
+.form-heading-text {
+	font-size: 22px;
+}
+.form-header-cell {
+	text-align: left;
+	padding-bottom: 10px;
+}
+
+
+.form-cell {
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	text-align: left;
+	width: 200px;
+	font-size: 18px;
+}
+#form-table {
+	width: 880px;
+
+}
+.parsley-required {
+	font-size: 14px !important;
+}
+#condition-popup {
+	padding: 5px;
+	width: 200%;
+	background-color: #FFF;
+	border: medium solid #999;
+	position: absolute;
+	left: -100%;
+	z-index: -999;
+	border-radius: 5px;
+	color: #333;
+	bottom: 250%;
+	/* [disabled]display: none; */
+	text-align: left;
+}
+
+
+
+#condition-popup-header {
+	font-size: 16px;
+}
+.condition-popup-p {
+	font-size: 14px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+input ,select{
+	font-size: 16px;
+}
+
+
+input {
+	width: 182px;
+}
+select {
+	width: 200px;
+}
