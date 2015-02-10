@@ -472,18 +472,22 @@ a.welcome-links:hover {
 }
 
 #laptop-background {
-	background-image: url(img/laptop.png);
+	background-image: url(img/laptop.gif);
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 420px;
-	padding-top: 150px;
+	padding-top: 50px;
 	margin-top: 25px;
 }
+#laptop-text-p {
+	margin-bottom: 10px;
+}
+
 
 
 #laptop-text {
 	font-size: 24px;
-	color: #FFF;
+	color: #333;
 	text-align: center;
 }
 .steps-line-LR {

@@ -267,7 +267,8 @@
     <div class="row" id="laptop-background">
     	
       	<div id="laptop-text">
-       	  	<p>Register with us</p>
+       	  	<p id="laptop-text-p">Register with us</p>
+			<img src="img/register.gif" width="auto" height="250" />
 		</div>
     
     </div>
