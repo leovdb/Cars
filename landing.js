@@ -4,6 +4,10 @@
 var carImgScalingFactor;
 var mobileMenuShown = false;
 
+function isMobileWidth() {
+    return $('#mobile-indicator').is(':visible');
+}
+
 $('#register-form-button').click(function(e) {
 	
 	ga('send', 'event', 'Form', 'Submit');
@@ -135,22 +139,14 @@ $('#register-form-condition').focus(function () {
 		conditionFocused = true;
 	}
 	
-	/*if(isMobileWidth())
+	$('#condition-popup').css('z-index','999');
+	
+	if(isMobileWidth())
 	{
-		$('#condition-popup').stop()
-		$('#condition-popup').fadeIn();
 		scrollToTop('#condition-popup',0);
 	}
 	
-	else
-	{*/
-		/*var popupBottom = -$('#condition-popup').height()/2;
-		var popupBottomS = popupBottom + "px";
 		
-		$('#condition-popup').css('bottom',popupBottomS);*/
-		$('#condition-popup').css('z-index','999');
-	//}
-	
 });
 
 $('#register-form-condition').change(function(e) {
@@ -243,24 +239,29 @@ var ctaIsVisible = false;
 function checkCallToAction()
 {
 	//Display the call to action button once the relevant item is visible
+	
+	var ctaShouldBeVisible = false;
+	
+	if(!isMobileWidth())
+	{
 	 
-	 var windowBottom;
-	 var windowTop;
-			
-	if($('body').scrollTop() > 0)
-	{
-		windowTop = $('body').scrollTop() + $('#top-navbar').height();
-		windowBottom = $('body').scrollTop() + $(window).height();
+		var windowBottom;
+		var windowTop;
+				
+		if($('body').scrollTop() > 0)
+		{
+			windowTop = $('body').scrollTop() + $('#top-navbar').height();
+			windowBottom = $('body').scrollTop() + $(window).height();
+		}
+		else
+		{
+			windowTop = $('html').scrollTop() + $('#top-navbar').height();
+			windowBottom = $('html').scrollTop() + $(window).height();
+		}
+		
+		ctaShouldBeVisible = (windowTop > ($('#CTA-top-table').offset().top) + $('#CTA-top-table').outerHeight(true)) && ((windowTop < $('#get-started').offset().top) && (windowBottom < $('#register-form-button').offset().top));
+
 	}
-	else
-	{
-		windowTop = $('html').scrollTop() + $('#top-navbar').height();
-		windowBottom = $('html').scrollTop() + $(window).height();
-	}
-	
-	
-	
-	var ctaShouldBeVisible = (windowTop > ($('#CTA-top-table').offset().top) + $('#CTA-top-table').outerHeight(true)) && ((windowTop < $('#get-started').offset().top) && (windowBottom < $('#register-form-button').offset().top));
     
 	if (ctaShouldBeVisible && !ctaIsVisible) {
           ctaIsVisible = true;

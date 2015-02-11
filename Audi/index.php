@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 <title>The best way to sell your Audi | Driven</title>
 
 	<meta property="og:site_name" content="Driven"/>
@@ -235,7 +235,7 @@
 						</table>
 					
 					</td>
-					<td class="form-table-spacer">&nbsp;</td>
+					<td class="form-table-spacer no-mobile">&nbsp;</td>
 					<td valign="top">
 						<table border="0" cellspacing="0" cellpadding="0">
 							<tr>
@@ -297,6 +297,7 @@
 	<div class="footer">&copy;&nbsp;Driven Cars Limited&nbsp;&nbsp;&nbsp;<a href="/privacy.html" id="privacy-link">Privacy policy</a></div>	
 		
 </div>
+<div id="mobile-indicator"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 

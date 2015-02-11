@@ -318,3 +318,7 @@ input ,select{
 	color: #333;
 	text-decoration: none;
 }
+
+#mobile-indicator {
+	display: none;
+}
