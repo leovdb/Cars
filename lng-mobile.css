@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+table, tbody, tr, td {
+	display: block;
+}
+
+h1 {
+	font-size: 22px;
+	
+}
+
+h2 {
+	font-size: 24px;
+	
+}
+
+h3 {
+	font-size: 16px;
+}
+.large-font {
+	font-size: 16px;
+}
+#hero-header-body {
+	width: 98%;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+
+#body-container {
+	width: 98%;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+#callout-table {
+	margin-top: 35px;
+	margin-bottom: 50px;
+}
+
+
+.circle-callout {
+	height: auto;
+	width: 75%;
+	border-radius: 20px;
+	font-size: 12px;
+	line-height: 16px;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+}
+
+
+.circles-cell {
+	/* [disabled]display: none; */
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+#CTA-top-table {
+	left: 12.5%;
+	top: -30px;
+	width: 75%;
+}
+
+.CTA-button {
+	height: 50px;
+	border-radius: 10px;
+	width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#what-we-do-table {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.descriptor-cell {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.mobile-table-row {
+	width: 100%;
+}
+
+
+.descriptor-icon-cell {
+	width: 15%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 5px;
+	/* [disabled]height: 10%; */
+}
+
+.descriptor-text-cell {
+	width: 95%;
+	font-size: 14px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.descriptor-sub {
+	font-size: 11px;
+}
+
+.descriptor-icon {
+	height: auto;
+	width: 100%;
+}
+.section-kicker {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#what-you-do-table {
+	width: 100%;
+}
+.quote-table {
+	width: 95%;
+	margin-top: 25px;
+}
+.quote {
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+}
+#testamonial-img-cell {
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#form-header {
+	width: 95%;
+	font-size: 24px;
+}
+
+#form-body {
+	width: 95%;
+}
+
+.form-heading-number {
+	font-size: 36px;
+}
+
+.form-heading-text {
+	font-size: 18px;
+}
+
+.form-header-cell {
+	padding-bottom: 10px;
+}
+
+.form-cell {
+	width: 130px;
+	font-size: 12px;
+}
+
+input ,select{
+	font-size: 12px;
+}
+
+input {
+	width: 150px;
+}
+select {
+	width: 168px;
+}
+
+.no-mobile {
+	display: none;
+}

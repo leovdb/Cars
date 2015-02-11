@@ -20,7 +20,10 @@
 	<link href="../landing.css" rel="stylesheet" type="text/css" />
 	
 	<!-- Small -->
-	<link href="../lng-small.css" rel="stylesheet" type="text/css"/>
+	<link href="../lng-small.css" rel="stylesheet" type="text/css" />
+	
+	<!-- Mobile -->
+	<link href="../lng-mobile.css" rel="stylesheet" type="text/css" media="only screen and (max-width:767px)" />
 	
 	<!-- Medium -->
 	<link href="../lng-medium.css" rel="stylesheet" type="text/css" media="only screen and (min-width:1024px) and (max-width:1679px)" />
@@ -61,9 +64,9 @@
 			<table border="0" cellspacing="0" cellpadding="0" id="callout-table">
 				<tr>
 					<td class="circle-callout">Another driver will typically pay 10-20% more for your Audi than a dealer</td>
-					<td class="circles-cell"><div class="small-circle"></div><div class="small-circle"></div></td>
+					<td class="circles-cell"><div class="small-circle no-mobile"></div><div class="small-circle"></div></td>
 					<td class="circle-callout">But selling a car yourself is a lot of hassle</td>
-					<td class="circles-cell"><div class="small-circle"></div><div class="small-circle"></div></td>
+					<td class="circles-cell"><div class="small-circle no-mobile"></div><div class="small-circle"></div></td>
 					<td class="circle-callout">We’ll sell your Audi, taking care of all the hassle. You’ll get more money</td>
 				</tr>
 			</table>
@@ -87,7 +90,7 @@
 		<h2 id="what-we-do">What we do</h2>
 	
 		<table id="what-we-do-table" border="0" cellspacing="0" cellpadding="0" class="centered-table">
-			<tr>
+			<tr class="mobile-table-row">
 				<td class="descriptor-icon-cell descriptor-cell"><img src="../img/Inspection-icon.gif" class="descriptor-icon" /></td>
 				<td class="descriptor-text-cell descriptor-cell">
 					Get your Audi inspected by the AA
@@ -126,8 +129,8 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="descriptor-icon-cell descriptor-cell">&nbsp;</td>
-				<td class="descriptor-text-cell descriptor-cell">&nbsp;</td>
+				<td class="descriptor-icon-cell descriptor-cell no-mobile">&nbsp;</td>
+				<td class="descriptor-text-cell descriptor-cell no-mobile">&nbsp;</td>
 				
 				<td class="descriptor-icon-cell descriptor-cell"><img src="../img/Phone-icon.gif" class="descriptor-icon" /></td>
 				<td class="descriptor-text-cell descriptor-cell">
@@ -135,8 +138,8 @@
 					<p class="descriptor-sub">So you don’t have to deal with scammers</p>
 				</td>
 				
-				<td class="descriptor-icon-cell descriptor-cell">&nbsp;</td>
-				<td class="descriptor-text-cell descriptor-cell">&nbsp;</td>
+				<td class="descriptor-icon-cell descriptor-cell no-mobile">&nbsp;</td>
+				<td class="descriptor-text-cell descriptor-cell no-mobile">&nbsp;</td>
 			</tr>
 		</table>
 		
