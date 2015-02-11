@@ -192,73 +192,90 @@
 			
 			<table border="0" cellspacing="0" cellpadding="0" class="centered-table" id="form-table">
 				<tr>
-				
-					<td colspan="2" class="form-header-cell"><span class="form-heading-number">1.</span><span class="form-heading-text">Tell us about your Audi</span></td>
-					<td>&nbsp;</td>
-					<td colspan="2" class="form-header-cell"><span class="form-heading-number">2.</span><span class="form-heading-text">Tell us about you</span></td>
+					<td valign="top">
 					
-				</tr>
-               	
-				<tr>
-					<td class="form-cell">Reg Number*</td>
-					<td>
-						<input name="reg" type="text" tabindex="1" id="register-form-reg" placeholder="Written on the car. Twice" maxlength="8" data-parsley-required data-parsley-required-message="We need this to tell what car you have" />
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td colspan="2" class="form-header-cell"><span class="form-heading-number">1.</span><span class="form-heading-text">Tell us about your Audi</span></td>
+							</tr>
+							<tr>
+								<td class="form-cell">Reg Number*</td>
+								<td>
+									<input name="reg" type="text" tabindex="1" id="register-form-reg" placeholder="Written on the car. Twice" maxlength="8" data-parsley-required data-parsley-required-message="We need this to tell what car you have" />
+								</td>
+							</tr>
+							<tr>
+								<td class="form-cell">Mileage*</td>
+								<td>
+									<input name="mileage" type="text" tabindex="2" id="register-form-mileage" placeholder="The miles on the clock" maxlength="9" data-parsley-required data-parsley-type="number" data-parsley-required-message="We need this to know how much it's worth"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="form-cell">Condition*</td>
+								<td class="condition-popup-wrapper">
+									<div id="condition-popup">
+									<span id="condition-popup-header">Your car's condition affects how much cash you'll get. Here's how we work:</span>
+									<p class="condition-popup-p"><strong>Clark Gable: it's a handsome screen idol.</strong> It's got no scrapes or scratches, there are no mechanical problems and you've got a full service history.</p>
+									<p class="condition-popup-p"><strong>Marlon Brando: it's not perfect, but it's pretty close.</strong> It's got the odd scratch or bump, but everything mechanical works well and you've got a full service history to prove it.</p>
+									<p class="condition-popup-p"><strong>Paul Newman: it's lived a little, and you both know it.</strong> It's got a few scratches. It's missing a bit of paint or has one or two mechanical issues, but at least you've got a full service history.</p>
+									<p class="condition-popup-p"><strong>Olly Reed: it's a hellraiser.</strong> It's scratched, there are some mechanical issues you haven't fixed and you're not quite sure where all its service history is. But it gets you from A to B.</p>
+									</div>
+									
+									<select name="condition" tabindex="3" class="empty" id="register-form-condition" data-parsley-required data-parsley-required-message="If you're not sure, go for Paul Newman">
+										
+										<option value="" disabled selected style='display:none;'>The state it's in</option>
+										<option value="Excellent">Clark Gable</option>
+										<option value="Good">Marlon Brando</option>
+										<option value="Average">Paul Newman</option>
+										<option value="Poor">Olly Reed</option>
+										
+									</select>
+								</td>
+							</tr>
+						</table>
+					
 					</td>
-					<td width="50">&nbsp;</td>
-					<td class="form-cell">Your email address*</td>
-					<td>
-						<input name="email" type="text" tabindex="4" id="register-form-email" placeholder="How we get in touch" data-parsley-required data-parsley-type="email" data-parsley-required-message="We need to be able to contact you"/>
-					</td>
-				</tr>
-				<tr>
-					<td class="form-cell">Mileage*</td>
-					<td>
-						<input name="mileage" type="text" tabindex="2" id="register-form-mileage" placeholder="The miles on the clock" maxlength="9" data-parsley-required data-parsley-type="number" data-parsley-required-message="We need this to know how much it's worth"/>
-					</td>
-					<td width="50">&nbsp;</td>
-					<td class="form-cell">Your name*</td>
-					<td>
-						<input name="name" type="text" tabindex="5" id="register-form-name" class="r2" placeholder="What we should call you" data-parsley-required data-parsley-required-message="We need to know what to call you"/>
-					</td>
-				</tr>
-				<tr>
-					<td class="form-cell">Condition*</td>
-					<td class="condition-popup-wrapper">
-						<div id="condition-popup">
-						<span id="condition-popup-header">Your car's condition affects how much cash you'll get. Here's how we work:</span>
-						<p class="condition-popup-p"><strong>Clark Gable: it's a handsome screen idol.</strong> It's got no scrapes or scratches, there are no mechanical problems and you've got a full service history.</p>
-						<p class="condition-popup-p"><strong>Marlon Brando: it's not perfect, but it's pretty close.</strong> It's got the odd scratch or bump, but everything mechanical works well and you've got a full service history to prove it.</p>
-						<p class="condition-popup-p"><strong>Paul Newman: it's lived a little, and you both know it.</strong> It's got a few scratches. It's missing a bit of paint or has one or two mechanical issues, but at least you've got a full service history.</p>
-						<p class="condition-popup-p"><strong>Olly Reed: it's a hellraiser.</strong> It's scratched, there are some mechanical issues you haven't fixed and you're not quite sure where all its service history is. But it gets you from A to B.</p>
-						</div>
-						
-						<select name="condition" tabindex="3" class="empty" id="register-form-condition" data-parsley-required data-parsley-required-message="If you're not sure, go for Paul Newman">
+					<td class="form-table-spacer">&nbsp;</td>
+					<td valign="top">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td colspan="2" class="form-header-cell"><span class="form-heading-number">2.</span><span class="form-heading-text">Tell us about you</span></td>
+					
+							</tr>
 							
-							<option value="" disabled selected style='display:none;'>The state it's in</option>
-							<option value="Excellent">Clark Gable</option>
-							<option value="Good">Marlon Brando</option>
-							<option value="Average">Paul Newman</option>
-							<option value="Poor">Olly Reed</option>
-							
-						</select>
-					</td>
-					<td width="50">&nbsp;</td>
-					<td class="form-cell">Your postcode*</td>
-					<td>
-						<input name="postcode" type="text" tabindex="6" id="register-form-postcode" placeholder="Where we come to" data-parsley-required data-parsley-required-message="We need to know we can come to you" />
-					</td>
-				</tr>
-				<tr>
-					<td class="form-cell">&nbsp;</td>
-					<td>&nbsp;</td>
-					<td width="50">&nbsp;</td>
-					<td class="form-cell">Your phone number</td>
-					<td>
-						<input name="phone" type="text" tabindex="7" id="register-form-phone" class="r2" placeholder="We won't prank call you" />
+							<tr>
+								
+								<td class="form-cell">Your email address*</td>
+								<td>
+									<input name="email" type="text" tabindex="4" id="register-form-email" placeholder="How we get in touch" data-parsley-required data-parsley-type="email" data-parsley-required-message="We need to be able to contact you"/>
+								</td>
+							</tr>
+							<tr>
+								
+								<td class="form-cell">Your name*</td>
+								<td>
+									<input name="name" type="text" tabindex="5" id="register-form-name" class="r2" placeholder="What we should call you" data-parsley-required data-parsley-required-message="We need to know what to call you"/>
+								</td>
+							</tr>
+							<tr>
+								
+								<td class="form-cell">Your postcode*</td>
+								<td>
+									<input name="postcode" type="text" tabindex="6" id="register-form-postcode" placeholder="Where we come to" data-parsley-required data-parsley-required-message="We need to know we can come to you" />
+								</td>
+							</tr>
+							<tr>
+								
+								<td class="form-cell">Your phone number</td>
+								<td>
+									<input name="phone" type="text" tabindex="7" id="register-form-phone" class="r2" placeholder="We won't prank call you" />
+								</td>
+							</tr>
+						</table>
 					</td>
 				</tr>
 			</table>
-			
+
 			<?php 
 			$ref_s = "";
 			if(isset($_GET["ref"]))
