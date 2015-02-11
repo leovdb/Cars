@@ -47,7 +47,7 @@
 
 <body>
 
-<div id="call-to-action">
+<div class="CTA-button" id="call-to-action">
 
 	<a class="internal-link call-to-action-link" href="#register-header">Get me a quote</a>
 
@@ -394,7 +394,6 @@
 
 </div>
 
-
 <div class="section-container">
 
 	<div class="steps-text steps-text-left" id="steps-5">
@@ -416,8 +415,17 @@
     
 </div>
 
-<div class="spacer">
+<div class="section-container">
+
+	<div class="CTA-button" id="CTA-section-end">
+
+		<a class="internal-link call-to-action-link" href="#register-header">Interested?<br />Get a quote here</a>
+
+	</div>
+
 </div>
+
+
 
 <div class="section-header" id="FAQ-header">
  
