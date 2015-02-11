@@ -7,6 +7,21 @@ body {
 	display:none;
 }
 
+.call-to-action-link:link {
+	color: #FFF;
+	text-decoration:none;
+}
+
+.call-to-action-link:visited {
+	color: #FFF;
+	text-decoration:none;
+}
+
+.call-to-action-link:hover {
+	color: #FFF;
+	text-decoration:none;
+}
+
 .welcome-container {
 	position: relative;
 	width: 100%;
@@ -370,6 +385,18 @@ a.welcome-links:hover {
 	width: 75px;
 	height: auto;
 	opacity: 1 !important;
+}
+#CTA-section-end {
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	background-color: #FC0;
+	font-size: 20px;
+	border-radius: 20px;
+	padding: 10px;
 }
 .FAQ-LHS {
 	padding-top: 10px;
