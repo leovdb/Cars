@@ -4,18 +4,21 @@
 
 @media (min-width: 768px) {*/
 #call-to-action {
-	font-size: 20px;
-	/* [disabled]color: #FFF; */
-	background-color: #3C3;
-	padding: 10px;
 	position: fixed;
 	right: 25px;
 	bottom: 25px;
-	border-radius: 5px;
 	z-index: 999;
 	display: none;
-	/* [disabled]opacity: 0; */
+	
 }
+.CTA-button {
+	font-size: 20px;
+	background-color: #3C3;
+	padding: 10px;
+	border-radius: 5px;
+	
+}
+
 .call-to-action-link:link {
 	color: #FFF;
 	text-decoration:none;
@@ -509,6 +512,18 @@ a.welcome-links:hover {
 	top: 0px;
 	left: 0px;
 }
+#CTA-section-end {
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background-color: #FC0;
+	font-size: 28px;
+	border-radius: 20px;
+}
+
 .vertical-line {
 	background-image: url(img/Vertical-Line-grey.gif);
 	margin-top: 25px;
@@ -591,7 +606,7 @@ select {
 	color: gray;
 }
 .uppercase {
-	text-transform: capitalize;
+	text-transform: uppercase;
 }
 #condition-popup {
 	padding: 5px;
