@@ -508,6 +508,26 @@ $(window).scroll(function(){
 	 
 });
 
+function addCampaignToForm()
+{
+	//Use regex to get the bit after the trailing "/"
+	
+	var regex = new RegExp("[^\/]*$");
+	var address = window.location.href;
+	
+	var suffix = regex.exec(address);
+	
+	regex = new RegExp("[^\?\.]*");
+	var paramValue = regex.exec(suffix[0]);
+	
+	var $utmEl = $("<input type='hidden' name='AdCampaign' value='" + paramValue[0] + "'>");
+	if (paramValue[0] != "")
+	{
+        $("form").first().prepend($utmEl);
+	}	
+	
+}
+
 $(document).ready(function() {
 	
 	var welcomeContainerMargin = $('#top-navbar').height() + 'px';
@@ -530,9 +550,12 @@ $(document).ready(function() {
 		
 		$(this).css({ top: topPosition + 'px' })
 	});
+	
+	addCampaignToForm();
+	addUTMCodesToForm();	
 
 	//Send event that the page has loaded
-	ga('send', 'event', 'Loaded', 'Page');
+	//ga('send', 'event', 'Loaded', 'Page');
 	
 	var controller = $.superscrollorama();
 	
