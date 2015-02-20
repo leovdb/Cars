@@ -10,6 +10,13 @@
    $phone = NULL;
    $ref = "";
    $source = "";
+   $utm_source = "";
+   $utm_medium = "";
+   $utm_campaign ="";
+   $utm_content="";
+   $utm_term="";
+   
+   $ad_campaign = "";
    
    $email_error = NULL;
 
@@ -20,6 +27,17 @@
       $data = stripslashes($data);
       $data = htmlspecialchars($data);
       return $data;
+   }
+   
+   function get_var($varName)
+   {
+	   	$var = "";
+	   	if(isset($_POST[$varName]))
+	  	{
+			$var = clean_input($_POST[$varName]);
+	  	}
+		
+		return $var;
    }
 
    // if post then process and route otherwise show form
@@ -33,14 +51,15 @@
 	  $condition = clean_input($_POST["condition"]);
 	  $phone = clean_input($_POST["phone"]);
 	  
-	  if(isset($_POST["ref"]))
-	  {
-		$ref = clean_input($_POST["ref"]);
-	  }
-	  if(isset($_POST["source"]))
-	  {
-		$source = clean_input($_POST["source"]);
-	  }
+	  $ref = get_var("ref");
+	  $source = get_var("source");
+	  $utm_source = get_var("utm_source");
+      $utm_medium = get_var("utm_medium");
+	  $utm_campaign = get_var("utm_campaign");
+	  $utm_content= get_var("utm_content");
+	  $utm_term = get_var("utm_term");
+
+	  $ad_campaign = get_var("AdCampaign");
 
       // various rules go here
       // this one reflects that name is required
@@ -75,9 +94,16 @@
 		 $message .= "Mileage: ".$mileage."\r\n";
 		 $message .= "Condition: ".$condition."\r\n";
 		 $message .= "Postcode: ".$postcode."\r\n";
-		 $message .= "Phone: ".$phone."\r\n";
+		 $message .= "Phone: ".$phone."\r\n\r\n";
 		 $message .= "Referrer: ".$ref."\r\n";
-		 $message .= "Source: ".$source."\r\n";
+		 $message .= "Source: ".$source."\r\n\r\n";
+		 $message .= "utm_source: ".$utm_source."\r\n";
+		 $message .= "utm_medium: ".$utm_medium."\r\n";
+		 $message .= "utm_campaign: ".$utm_campaign."\r\n";
+		 $message .= "utm_content: ".$utm_content."\r\n";
+		 $message .= "utm_term: ".$utm_term."\r\n";
+		 $message .= "Ad Campaign: ".$ad_campaign."\r\n";
+		 
 		 
          $headers  = "From: leo@driven-cars.com"."\r\n"."Reply-To: leo@driven-cars.com";
 
