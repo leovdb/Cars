@@ -6,13 +6,13 @@ body {
 }
 
 h1 {
-	font-weight: 900;
+	font-weight: 700;
 	margin-bottom: 0px;
 	margin-top: 10px;
 }
 
 h2 {
-	font-weight: 600;
+	font-weight: 700;
 	color: #333;
 }
 h3 {
@@ -50,7 +50,7 @@ h3 {
 #hero-header {
 	background-image: url(audi/audi-hero.jpg);
 	background-repeat: no-repeat;
-	background-position: center top;
+	background-position: center center;
 	/* [disabled]height: 400px; */
 	width: 100%;
 	overflow: hidden;
@@ -97,7 +97,7 @@ h3 {
 	border: 2px solid #369;
 	text-align: center;
 	vertical-align: middle;
-	font-weight: 600;
+	font-weight: 700;
 	background-color: #369;
 }
 #callout-table {
@@ -106,7 +106,7 @@ h3 {
 	margin-right: auto;
 }
 .CTA-appearance {
-	font-weight: 600;
+	font-weight: 700;
 	color: #FFF;
 	background-color: #6C6;
 	text-align: center;
@@ -141,7 +141,7 @@ h3 {
 .descriptor-text-cell {
 	vertical-align: middle;
 	text-align: left;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .descriptor-sub {
@@ -173,7 +173,7 @@ h3 {
 }
 .quote {
 	color: #06C;
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 0px;
 	margin-left: 25px;
 	margin-right: 25px;
@@ -189,7 +189,7 @@ h3 {
 	vertical-align: middle;
 }
 .small-circle {
-	background-color: #06C;
+	background-color: #369;
 	display: inline-block;
 }
 
@@ -213,7 +213,7 @@ h3 {
 	padding-bottom: 5px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-	font-weight: 600;
+	font-weight: 700;
 	border: thin solid #36C;
 	margin-top: 25px;
 	width: 700px;
@@ -321,4 +321,14 @@ input ,select{
 
 #mobile-indicator {
 	display: none;
+}
+
+
+
+.quote-background {
+
+    border-radius: 10px;
+    background-color: rgba(128,128,128,0.6);
+    padding: 15px;
+
 }

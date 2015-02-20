@@ -259,7 +259,7 @@ function checkCallToAction()
 			windowBottom = $('html').scrollTop() + $(window).height();
 		}
 		
-		ctaShouldBeVisible = (windowTop > ($('#CTA-top-table').offset().top) + $('#CTA-top-table').outerHeight(true)) && ((windowTop < $('#get-started').offset().top) && (windowBottom < $('#register-form-button').offset().top));
+		ctaShouldBeVisible = (windowTop > ($('#register-form-button').offset().top));
 
 	}
     
@@ -285,7 +285,13 @@ function checkAnalyticScrollEvents()
 	
 	effectiveTop = $(window).scrollTop();
 	
-	if((effectiveTop >= $('#what-we-do').offset().top) && !gaScrollWhatWeDo)
+	if((effectiveTop >= $('#why-use-us').offset().top) && !gaScrollWhatWeDo)
+	{
+		ga('send', 'event', 'Page', 'Scroll', 'What we do');
+		gaScrollWhatWeDo = true;
+	}
+    
+    if((effectiveTop >= $('#what-we-do').offset().top) && !gaScrollWhatWeDo)
 	{
 		ga('send', 'event', 'Page', 'Scroll', 'What we do');
 		gaScrollWhatWeDo = true;
@@ -295,12 +301,6 @@ function checkAnalyticScrollEvents()
 	{
 		ga('send', 'event', 'Page', 'Scroll', 'What you do');
 		gaScrollWhatYouDo = true;
-	}
-	
-	if((bottom >= $('#register-form-button').offset().top) && !gaScrollQuote)
-	{
-		ga('send', 'event', 'Page', 'Scroll', 'Register');
-		gaScrollQuote = true;
 	}
 		
 };
