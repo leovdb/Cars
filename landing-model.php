@@ -1,7 +1,7 @@
 <?php
-	$directory = basename(__DIR__);
+	//$directory = basename(__DIR__);
 	
-	$servername = "titan.solardns.com:3306";
+	$servername = "localhost";
 	$username = "dkltdnet_leo";
 	$password = "daglish";
 	
@@ -9,8 +9,8 @@
 	$conn = @mysqli_connect($servername, $username, $password);
 
 	$model = "car";
-	
-	if($conn)
+
+    if($conn)
 	{
 		$SQLCommand = "SELECT * FROM dkltdnet_driven.models WHERE directory=\"".$directory."\"";
 		$result = mysqli_query($conn, $SQLCommand); // This line executes the MySQL query that you typed above
@@ -35,20 +35,23 @@
     <meta property="og:title" content="Get a better deal for your <?php echo $model; ?>." />
     <meta property="og:description" content="We are a new way of selling your <?php echo $model; ?> in London. We get you more money than a dealer, without any of the hassle of selling the car yourself." />
     <meta property="og:url" content="http://www.driven-cars.com/<?php echo $directory; ?>/" />
-    <meta property="og:image" content="http://www.driven-cars.com/audi/audi-hero.jpg">
+    <meta property="og:image" content="http://www.driven-cars.com/<?php echo $directory; ?>/hero.jpg">
     <meta property="fb:admins" content="689595042" />
     
 	<meta name="description" content="We get you more money than a dealer, without the hassle of selling the car yourself. We're the new way to sell your <?php echo $model; ?> in London.">
 
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300,700,400' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
 	<link href="../landing.css" rel="stylesheet" type="text/css" />
 	
 	<!-- Small -->
 	<link href="../lng-small.css" rel="stylesheet" type="text/css"/>
 	
-	<!-- Medium -->
+	<!-- Mobile -->
+    <link href="../lng-mobile.css" rel="stylesheet" type="text/css" media="only screen and (max-width:767px)" />
+    
+    <!-- Medium -->
 	<link href="../lng-medium.css" rel="stylesheet" type="text/css" media="only screen and (min-width:1024px) and (max-width:1679px)" />
 	
 	<!-- Large -->
@@ -66,6 +69,15 @@
 
 	</script>
 
+    <style>
+    
+        #hero-header {
+            background-image: url(hero.jpg);
+        }
+    
+    
+    </style>
+    
 </head>
 
 <body>
@@ -105,7 +117,7 @@
 		<a href="#get-started" class="internal-link call-to-action-link">
 		<table id="CTA-top-table">
 			<tr>
-				<td class="CTA-button CTA-appearance">Get a free, no obligation quote here</td>
+				<td class="CTA-button CTA-appearance">Get a free quote below</td>
 			</tr>
 		</table>
 		</a>
@@ -201,14 +213,14 @@
 				
 				$resultsArray = array(); // make a new array to hold all your data
 				
-				$index = 0;
+                $index = 0;
 				while($row = mysqli_fetch_assoc($result))
 				{
 					 $resultsArray[$index] = $row;
 					 $index++;
 				}
 				
-				$numEntries = $index-1;
+				$numEntries = $index;
 				
 				$customerName="";
 				$testamonial="";
@@ -217,11 +229,11 @@
 				
 				if($numEntries > 0)
 				{
-					$randomIndex = rand(0,$numEntries);
+					$randomIndex = rand(1,$numEntries) - 1;
 				
-					$customerName = $resultsArray[$randomIndex]['customer_desc']; 
+                    $customerName = $resultsArray[$randomIndex]['customer_desc']; 
 					$testamonial = $resultsArray[$randomIndex]['testamonial'];
-					$imgURL = "/img/testamonials/".$resultsArray[$randomIndex]['testamonial_id'].".jpg";
+					$imgURL = "../img/testamonials/".$resultsArray[$randomIndex]['testamonial_id'].".gif";
 					$printTestamonials = true;
 				}
 				else
@@ -238,16 +250,17 @@
 						 $index++;
 					}
 					
-					$numEntries = $index-1;
+					$numEntries = $index;
 					
 					if($numEntries > 0)
 					{
-						$randomIndex = rand(0,$numEntries);
+						$randomIndex = rand(1,$numEntries) - 1;
 					
-						$customerName = $genResultsArray[$randomIndex]['customer_desc_generic']; 
+                        $customerName = $genResultsArray[$randomIndex]['customer_desc_generic']; 
 						$testamonial = $genResultsArray[$randomIndex]['testamonial'];
-						$imgURL = "/img/testamonials/".$genResultsArray[$randomIndex]['testamonial_id'].".jpg";
-						$printTestamonials = true;
+						$imgURL = "../img/testamonials/".$genResultsArray[$randomIndex]['testamonial_id'].".gif";
+						
+                        $printTestamonials = true;
 					}
 				}
 				
@@ -261,7 +274,7 @@
 				<td valign="middle" width="100%">
 					<p class="quote large-font">"<?php echo $testamonial;?>" - <?php echo $customerName;?></p>
 				</td>
-				<td valign="middle" id="testamonial-img-cell"><img src="dom.gif" id="testamonial-img"/></td>
+				<td valign="middle" id="testamonial-img-cell"><img src="<?php echo $imgURL;?>" id="testamonial-img"/></td>
 				
 			</tr>
 			</table>
@@ -388,6 +401,7 @@ window.ParsleyConfig = {
 </script>
 
 <script src="../parsley.min.js"></script>
+<script src="../utm.js"></script>
 <script src="../landing.js"></script>
 
 </body>
