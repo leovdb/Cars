@@ -1,0 +1,457 @@
+@charset utf-8;
+
+body {
+font-family:Roboto, Verdana, Geneva, sans-serif;
+background-color:#fff;
+margin:0;
+}
+
+h1 {
+font-weight:700;
+margin-bottom:0;
+margin-top:0px;
+font-size:48px;
+    line-height: 1.618;
+    
+}
+
+h2 {
+font-weight:700;
+color:#333;
+font-size:24px;
+margin-top: 25px;
+}
+
+h3 {
+font-weight:700;
+font-size:30px;
+line-height: 1.1;
+text-align: left;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+
+    
+}
+
+#call-to-action {
+position:fixed;
+right:25px;
+bottom:25px;
+z-index:999;
+display:none;
+border-radius:10px;
+padding:10px;
+}
+
+#hero-header {
+background-color: rgb(85, 153, 221);
+background-repeat:no-repeat;
+background-position:center center;
+width:100%;
+/*overflow:hidden;*/
+background-size:cover;
+}
+
+#logo {
+margin-top:10px;
+margin-bottom:0;
+height:auto;
+width:160px;
+}
+
+.body-container {
+margin-right:auto;
+margin-left:auto;
+background-color:#FFF;
+padding-right:8px;
+padding-left:8px;
+position:relative;
+text-align:center;
+width:750px;
+}
+
+#hero-header-body {
+/*background-color: #fff;*/
+margin-right:auto;
+margin-left:auto;
+/*overflow:hidden;*/
+padding-right:8px;
+padding-left:8px;
+text-align:center;
+color:#fff;
+position:relative;
+width:750px;
+padding-bottom: 20px;    
+}
+
+#header-logo {
+width:160px;
+height:auto;
+padding:5px;
+}
+
+.CTA-appearance {
+font-weight:700;
+color:#FFF;
+background-color: #FF9933;
+text-align:center;
+font-size:20px;
+border-style:none;
+}
+
+.CTA-button-table {
+margin-left:auto;
+margin-right:auto;
+margin-bottom: 25px;
+}
+
+#what-we-do-table {
+width:750px;
+}
+
+#what-you-do-table {
+width:500px;
+}
+
+.descriptor-cell {
+padding:10px 5px;
+}
+
+.descriptor-icon-cell {
+vertical-align:middle;
+width:40px;
+}
+
+.descriptor-text-cell {
+vertical-align:middle;
+text-align:left;
+font-weight:700;
+width:190px;
+font-size:10px;
+}
+
+.descriptor-sub {
+margin-top:4px;
+font-weight:300;
+font-size:9px;
+}
+
+.section-kicker {
+margin-top:25px;
+margin-bottom:25px;
+}
+
+.section-divider {
+height:1px;
+width:85%;
+margin-right:auto;
+margin-left:auto;
+border-bottom-width:thin;
+border-bottom-style:solid;
+border-bottom-color:#666;
+clear:both;
+}
+
+.centered-table {
+margin-right:auto;
+margin-left:auto;
+}
+
+.quote-table {
+width:85%;
+margin-left:auto;
+margin-right:auto;
+}
+
+.quote {
+font-weight:400;
+text-align:left;
+margin:0 25px;
+}
+
+.large-font {
+font-size:18px;
+}
+
+#testamonial-img {
+margin-bottom:10px;
+margin-top:10px;
+margin-right: 10px;
+height:100px;
+width:auto;
+}
+
+.form-preamble {
+font-size:16px;
+}
+
+#get-started {
+background-color:#333;
+border:thin solid #333;
+    margin-right:auto;
+margin-left:auto;
+padding-top:10px;
+padding-bottom:5px;
+font-weight:700;
+margin-top:15px;
+font-size:38px;
+}
+
+#form-body {
+background-color:#333;
+border:thin solid #333;
+/*border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;*/
+margin-left:auto;
+margin-right:auto;
+padding-bottom:10px;
+margin-bottom:25px;
+}
+
+
+.form-header-cell {
+text-align:left;
+padding-bottom:10px;
+}
+
+.form-cell {
+text-align:left;
+width:130px;
+font-size:12px;
+padding-left:10px;
+padding-right: 10px;
+padding-bottom: 8px;
+padding-top: 8px;
+}
+
+#form-table {
+margin-top:15px;
+margin-bottom:15px;
+width:650px;
+}
+
+#form-table-single-column {
+margin-top:15px;
+margin-bottom:35px;
+width:100%;
+}
+
+.form-table-spacer {
+width:50px;
+}
+
+.parsley-required {
+font-size:10px!important;
+padding-top:2px;
+color:#06F;
+}
+
+.condition-popup-wrapper {
+position:relative;
+}
+
+#condition-popup {
+width:170%;
+background-color:#FFF;
+border:medium solid #999;
+position:absolute;
+left:-75%;
+z-index:-999;
+border-radius:5px;
+color:#333;
+bottom:100%;
+text-align:left;
+padding:1%;
+}
+
+#condition-popup-header {
+font-size:12px;
+}
+
+.condition-popup-p {
+font-size:10px;
+margin-bottom:0;
+margin-top:5px;
+}
+
+input,select {
+color:#000;
+border:1px solid #333;
+border-radius:4px;
+font-size:12px;
+margin:0;
+padding:4px 8px;
+}
+
+.footer {
+text-align:left;
+margin-top:20px;
+margin-right:25px;
+margin-left:25px;
+font-size:12px;
+}
+
+.empty {
+color:gray;
+}
+
+#privacy-link {
+color:#333;
+text-decoration:none;
+}
+
+#mobile-indicator {
+display:none;
+}
+
+.quote-background {
+border-radius:10px;
+background-color:rgba(128,128,128,0.6);
+padding:15px;
+}
+
+.CTA-button {
+height:auto;
+border-radius:10px;
+width:auto;
+padding:0.5em;
+font-size:30px;
+}
+
+.descriptor-icon {
+height:40px;
+width:40px;
+}
+
+#testamonial-img-cell {
+width:100px;
+}
+
+input {
+width:150px;
+}
+
+select {
+width:168px;
+}
+
+.call-to-action-link:link,.call-to-action-link:visited,.call-to-action-link:hover {
+color:#FFF;
+text-decoration:none;
+}
+.form-backing {
+    width: 350px;
+    color: #fff;
+    /*border:thin solid #333;*/
+    
+}
+
+.form-explanation {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    font-size: 70%;
+    text-align: left;
+}
+
+.intro-headings {
+    margin-top: 1.618em;
+    margin-bottom: 0;
+    font-weight: 300;
+    color: #eee;
+
+}
+
+.intro-p {
+    margin-left:25px;
+    text-align:left;
+    color: #ccc;
+}
+
+#register-form-button {
+    background-color: #FF9933;
+    width: auto;
+    padding: 15px;
+    
+}
+
+#intro-text-container {
+    max-width: 99%;
+    vertical-align: top;
+    padding-top: 0px;
+}
+
+#intro-text-backing {
+    width:100%;
+    padding: 10px;
+    text-align: left;
+    
+}
+
+.form-width {
+    vertical-align: top;
+    position: relative;
+    width: 350px;
+}
+
+#page-header {
+    width:100%;
+    background-color: rgb(85, 153, 221);
+    color:#fff;
+    text-align: center;
+    overflow-y: hidden;
+}
+
+
+
+.banner-image {
+    width:100%;
+    height:100px;
+    background-repeat:no-repeat;
+    background-position:bottom center;
+    overflow:hidden;
+    background-size:cover;
+}
+
+#form-wrapper {
+    position: absolute;
+    top: -100px;
+    
+}
+
+.body-container {
+    width:750px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:8px;
+    padding-right:8px;
+    background-color: #fff;
+    color: #000;
+    overflow-y: hidden;
+}
+
+#intro-text-group {
+    font-size: 18px;
+    line-height: 1.618;
+    max-width: 33em;
+    padding-right: 1em;
+    
+}
+
+.text-background {
+    /*background-color: rgba(247,247,247,0.95);
+    border: medium solid white;*/
+}
+
+#quote-source {
+    font-size: 61.8%;
+}
+
+#below-button-text {
+    margin-top: 35px;
+}
+
+.CTA-into {
+    font-size: 61.8%;
+}

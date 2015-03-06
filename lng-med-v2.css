@@ -1,0 +1,157 @@
+@charset utf-8;
+
+h1 {
+font-size:48px;
+}
+
+h2 {
+font-size:24px;
+margin-top: 25px;
+}
+
+h3 {
+font-size:30px;
+}
+
+#logo {
+width:160px;
+}
+
+.body-container {
+width:990px;
+}
+
+#hero-header-body {
+width:990px;
+padding-bottom: 20px;    
+}
+
+.CTA-appearance {
+font-size:20px;
+}
+
+.CTA-button-table {
+margin-bottom: 25px;
+}
+
+#what-we-do-table {
+width:900px;
+}
+
+#what-you-do-table {
+width:600px;
+}
+
+.descriptor-cell {
+padding:10px 5px;
+}
+
+.descriptor-icon-cell {
+width:40px;
+}
+
+.descriptor-text-cell {
+width:240px;
+font-size:12px;
+}
+
+.descriptor-sub {
+margin-top:4px;
+font-size:10px;
+}
+
+.section-kicker {
+margin-top:25px;
+margin-bottom:25px;
+}
+
+.large-font {
+font-size:18px;
+}
+
+#testamonial-img {
+height:100px;
+}
+
+#get-started {
+font-size:38px;
+}
+
+.form-cell {
+width:130px;
+font-size:12px;
+padding-left:10px;
+padding-right: 10px;
+padding-bottom: 8px;
+padding-top: 8px;
+}
+
+#form-table-single-column {
+margin-top:15px;
+margin-bottom:35px;
+}
+
+#condition-popup-header {
+font-size:12px;
+}
+
+.condition-popup-p {
+font-size:10px;
+}
+
+input,select {
+font-size:12px;
+}
+
+.CTA-button {
+font-size:30px;
+}
+
+.descriptor-icon {
+height:40px;
+width:40px;
+}
+
+#testamonial-img-cell {
+width:100px;
+}
+
+input {
+width:150px;
+}
+
+select {
+width:168px;
+}
+
+.form-backing {
+    width: 350px;
+}
+
+.form-width {
+    vertical-align: top;
+    position: relative;
+    width: 350px;
+}
+
+.banner-image {
+    height:150px;
+}
+
+#banner-1 {
+    height:125px;
+}
+
+#form-wrapper {
+    top: -100px;
+}
+
+
+#intro-text-group {
+    font-size: 18px;
+    padding-right: 2em;
+}
+
+.CTA-intro {
+    font-size: 61.8%;
+}

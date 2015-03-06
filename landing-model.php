@@ -9,6 +9,7 @@
 	$conn = @mysqli_connect($servername, $username, $password);
 
 	$model = "car";
+    $years = "six";
 
     if($conn)
 	{
@@ -18,6 +19,7 @@
 		$row = mysqli_fetch_assoc($result);			
 
 		$model = $row['model_name'];
+        $years = $row['years'];
 	}
 
 ?>
@@ -28,7 +30,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <title>The best way to sell your <?php echo $model; ?> | Driven</title>
 
 	<meta property="og:site_name" content="Driven"/>
@@ -40,22 +42,18 @@
     
 	<meta name="description" content="We get you more money than a dealer, without the hassle of selling the car yourself. We're the new way to sell your <?php echo $model; ?> in London.">
 
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300,700,400' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
-	<link href="../landing.css" rel="stylesheet" type="text/css" />
 	
-	<!-- Small -->
-	<link href="../lng-small.css" rel="stylesheet" type="text/css"/>
+    <link href="../landing-v2.css" rel="stylesheet" type="text/css" />
 	
 	<!-- Mobile -->
-    <link href="../lng-mobile.css" rel="stylesheet" type="text/css" media="only screen and (max-width:767px)" />
+    <link href="../lng-mob-v2.css" rel="stylesheet" type="text/css" media="only screen and (max-width:767px)" />
     
     <!-- Medium -->
-	<link href="../lng-medium.css" rel="stylesheet" type="text/css" media="only screen and (min-width:1024px) and (max-width:1679px)" />
+	<link href="../lng-med-v2.css" rel="stylesheet" type="text/css" media="only screen and (min-width:1024px) and (max-width:1679px)" />
 	
 	<!-- Large -->
-	<link href="../lng-large.css" rel="stylesheet" type="text/css" media="only screen and (min-width:1680px)" />
+	<link href="../lng-lrg-v2.css" rel="stylesheet" type="text/css" media="only screen and (min-width:1680px)" />
 	
 	<script>
 
@@ -71,10 +69,15 @@
 
     <style>
     
-        #hero-header {
-            background-image: url(hero.jpg);
+        #banner-1 {
+            background-image: url(banner1.jpg);
         }
-    
+        #banner-2 {
+            background-image: url(banner2.jpg);
+        }
+        #banner-3 {
+            background-image: url(banner3.jpg);
+        }
     
     </style>
     
@@ -82,45 +85,228 @@
 
 <body>
 
-<div id="call-to-action" class="CTA-appearance">
-
-	<a class="internal-link call-to-action-link" href="#get-started">Get me a quote</a>
-
-</div>
-
-	<div id="hero-header">
-		
+	<div id="page-header">
+        <img src="../img/Driven-Logo-trans-gs.gif" width="160" height="38" id="logo" alt="Driven Logo"/>
+    <!--</div>
+    <div class="body-container">-->
+        <h1>The best way to sell your <?php echo $model; ?></h1>
+    </div>
+    <div class="banner-image" id="banner-1"></div>
+    <div id="hero-header">
 		<div id="hero-header-body">
-		
-			<img src="../img/Driven-Logo-trans.gif" width="160" height="38" id="logo" />
-			<h1>The best way to sell your <?php echo $model; ?></h1>
-			<h3>You’ll get more money than selling to a dealer, with none of the hassle of selling the car yourself</h3>
-		
-			<table border="0" cellspacing="0" cellpadding="0" id="callout-table">
-				<tr>
-					<td class="circle-callout">Another driver will typically pay 10-20% more for your <?php echo $model; ?> than a dealer</td>
-					<td class="circles-cell"><div class="small-circle"></div><div class="small-circle"></div></td>
-					<td class="circle-callout">But selling a car yourself is a lot of hassle</td>
-					<td class="circles-cell"><div class="small-circle"></div><div class="small-circle"></div></td>
-					<td class="circle-callout">We’ll sell your <?php echo $model; ?>, taking care of all the hassle. You’ll get more money</td>
-				</tr>
-			</table>
-			
-			
+            <table border="0" cellspacing="0" cellpadding="0" id="intro-table">
+                <tr>
+                    <td id="intro-text-container" style="max-width:99%" valign="middle">
+                        <div id="intro-text-group">
+                            <div id="intro-text-backing" class="text-background">
+                                <h3>Get more money than a dealer will pay you, without the hassle</h3>
 
+
+
+                                <!--<img src="hero-small.jpg" width="80%" height="auto">-->
+
+                                <p class="intro-headings">You’ll get more money for your <?php echo $model; ?> if you sell direct to another driver. But it's a pain to do.</p>
+                                <p class="intro-headings">At Driven we’ll take care of all this pain, sell your <?php echo $model; ?> for you and get you more money than a dealer would pay.</p>
+                            </div>
+
+
+                            <?php
+
+                            // Check connection
+                            if ($conn) {
+
+                                $SQLCommand = "SELECT * FROM dkltdnet_driven.testamonials WHERE car=\"".$directory."\"";
+                                $result = mysqli_query($conn, $SQLCommand); // This line executes the MySQL query that you typed above
+
+                                $resultsArray = array(); // make a new array to hold all your data
+
+                                $index = 0;
+                                while($row = mysqli_fetch_assoc($result))
+                                {
+                                     $resultsArray[$index] = $row;
+                                     $index++;
+                                }
+
+                                $numEntries = $index;
+
+                                $customerName="";
+                                $testamonial="";
+                                $imgURL="";
+                                $printTestamonials = false;
+
+                                if($numEntries > 0)
+                                {
+                                    $randomIndex = rand(1,$numEntries) - 1;
+
+                                    $customerName = $resultsArray[$randomIndex]['customer_desc']; 
+                                    $testamonial = $resultsArray[$randomIndex]['testamonial'];
+                                    $imgURL = "../img/testamonials/".$resultsArray[$randomIndex]['testamonial_id']."gs.gif";
+                                    $printTestamonials = true;
+                                }
+                                else
+                                {
+                                    $SQLCommand = "SELECT * FROM dkltdnet_driven.testamonials";
+                                    $result = mysqli_query($conn, $SQLCommand); // This line executes the MySQL query that you typed above
+
+                                    $genResultsArray = array(); // make a new array to hold all your data
+
+                                    $index = 0;
+                                    while($row = mysqli_fetch_assoc($result))
+                                    {
+                                         $genResultsArray[$index] = $row;
+                                         $index++;
+                                    }
+
+                                    $numEntries = $index;
+
+                                    if($numEntries > 0)
+                                    {
+                                        $randomIndex = rand(1,$numEntries) - 1;
+
+                                        $customerName = $genResultsArray[$randomIndex]['customer_desc_generic']; 
+                                        $testamonial = $genResultsArray[$randomIndex]['testamonial'];
+                                        $imgURL = "../img/testamonials/".$genResultsArray[$randomIndex]['testamonial_id']."gs.gif";
+
+                                        $printTestamonials = true;
+                                    }
+                                }
+
+                                if($printTestamonials)
+                                {				
+
+                            ?>	
+
+                            <table class="quote-table text-background" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td valign="middle" width="100%">
+                                    <p class="quote large-font">"<?php echo $testamonial;?>"<br/><span id="quote-source"><?php echo $customerName;?></span></p>
+                                </td>
+                                <td valign="middle" id="testamonial-img-cell"><img src="<?php echo $imgURL;?>" id="testamonial-img"/></td>
+
+                            </tr>
+                            </table>
+
+                            <?php
+                                }
+                            mysqli_close($conn);
+                            }
+
+                            ?>
+
+                        </div>
+                    </td>
+                    
+                    <td class="form-width">
+                    
+                        
+                        <div id="form-wrapper">
+                            <div id="get-started" class="form-backing" >Get a free valuation</div>
+
+                            <div id="form-body" class="form-backing">
+
+                                    <p class="form-explanation">
+                                        Based in London and with a car less than <?php echo $years; ?> years old? Perfect, we'll help you get more money for it. Just tell us about it.
+                                    </p>
+
+                                    <form action="../thankyou.php" method="post" name="register-form" data-parsley-validate>
+
+                                        <table border="0" cellspacing="0" cellpadding="0" class="centered-table" id="form-table-single-column">
+                                                        
+                                                        <tr>
+                                                            <td class="form-cell">Your Car's Reg Number*</td>
+                                                            <td>
+                                                                <input name="reg" type="text" tabindex="1" id="register-form-reg" placeholder="Written on the car. Twice" maxlength="8" data-parsley-required data-parsley-required-message="We need this to tell what car you have" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="form-cell">Your Car's Mileage*</td>
+                                                            <td>
+                                                                <input name="mileage" type="text" tabindex="2" id="register-form-mileage" placeholder="The miles on the clock" maxlength="9" data-parsley-required data-parsley-type="number" data-parsley-required-message="We need this to know how much it's worth" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="form-cell">Your Car's Condition*</td>
+                                                            <td class="condition-popup-wrapper">
+                                                                <div id="condition-popup">
+                                                                    <span id="condition-popup-header">Your car's condition affects how much cash you'll get. Here's how we work:</span>
+                                                                    <p class="condition-popup-p"><strong>Clark Gable: it's a handsome screen idol.</strong> It's got no scrapes or scratches, there are no mechanical problems and you've got a full service history.</p>
+                                                                    <p class="condition-popup-p"><strong>Marlon Brando: it's not perfect, but it's pretty close.</strong> It's got the odd scratch or bump, but everything mechanical works well and you've got a full service history to prove it.</p>
+                                                                    <p class="condition-popup-p"><strong>Paul Newman: it's lived a little, and you both know it.</strong> It's got a few scratches. It's missing a bit of paint or has one or two mechanical issues, but at least you've got a full service history.</p>
+                                                                    <p class="condition-popup-p"><strong>Olly Reed: it's a hellraiser.</strong> It's scratched, there are some mechanical issues you haven't fixed and you're not quite sure where all its service history is. But it gets you from A to B.</p>
+                                                                </div>
+
+                                                                <select name="condition" tabindex="3" class="empty" id="register-form-condition" data-parsley-required data-parsley-required-message="If you're not sure, go for Paul Newman">
+
+                                                                    <option value="" disabled selected style='display:none;'>The state it's in</option>
+                                                                    <option value="Excellent">Clark Gable</option>
+                                                                    <option value="Good">Marlon Brando</option>
+                                                                    <option value="Average">Paul Newman</option>
+                                                                    <option value="Poor">Olly Reed</option>
+
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+
+                                                            <td class="form-cell">Your email address*</td>
+                                                            <td>
+                                                                <input name="email" type="text" tabindex="4" id="register-form-email" placeholder="How we get in touch" data-parsley-required data-parsley-type="email" data-parsley-required-message="We need to be able to contact you" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+
+                                                            <td class="form-cell">Your name*</td>
+                                                            <td>
+                                                                <input name="name" type="text" tabindex="5" id="register-form-name" class="r2" placeholder="What we should call you" data-parsley-required data-parsley-required-message="We need to know what to call you" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+
+                                                            <td class="form-cell">Your postcode*</td>
+                                                            <td>
+                                                                <input name="postcode" type="text" tabindex="6" id="register-form-postcode" placeholder="Where the car is" data-parsley-required data-parsley-required-message="We need to know we can come to you" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+
+                                                            <td class="form-cell">Your phone number*</td>
+                                                            <td>
+                                                                <input name="phone" type="text" tabindex="7" id="register-form-phone" class="r2" placeholder="We won't prank call you"/>
+                                                            </td>
+                                                        </tr>
+
+                                        </table>
+
+                                        <?php $ref_s="" ; if(isset($_GET[ "ref"])) { $ref_s=$_GET[ "ref"]; } ?>
+
+                                        <input name="ref" type="hidden" value="<?php echo $ref_s; ?>" />
+                                        <input name="source" type="hidden" value="<?php echo $directory; ?>" />
+
+
+                                        <input name="register" type="submit" tabindex="8" id="register-form-button" value="Tell me what my car's worth" class="CTA-appearance" />
+
+
+                                    </form>
+                                
+                                    <p class="form-explanation" id="below-button-text">
+                                        We hate spam as much as you. We'll use your details to give you your valuation, discuss it with you and that's it. We won't pass your details on to anyone else either.
+                                    </p>
+
+                                </div>
+                            </div>
+                    </td>
+                
+                
+                </tr>
+            </table>
+    
+        
 			
 		</div>
 	</div>
-
-<div id="body-container">
-		
-		<a href="#get-started" class="internal-link call-to-action-link">
-		<table id="CTA-top-table">
-			<tr>
-				<td class="CTA-button CTA-appearance">Get a free quote below</td>
-			</tr>
-		</table>
-		</a>
+<div class="banner-image" id="banner-2"></div>
+<div class="body-container">
 		
 		<h2 id="what-we-do">What we do</h2>
 	
@@ -153,7 +339,7 @@
 				
 				<td class="descriptor-icon-cell descriptor-cell"><img src="../img/Computer-icon.gif" class="descriptor-icon" /></td>
 				<td class="descriptor-text-cell descriptor-cell">
-					Advertise your <?php echo $model; ?> online (eBay)
+					Advertise your <?php echo $model; ?> online (Auto Trader)
 					<p class="descriptor-sub">So buyers can find it</p>
 				</td>
 				
@@ -164,8 +350,8 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="descriptor-icon-cell descriptor-cell">&nbsp;</td>
-				<td class="descriptor-text-cell descriptor-cell">&nbsp;</td>
+				<td class="descriptor-icon-cell descriptor-cell no-mobile">&nbsp;</td>
+				<td class="descriptor-text-cell descriptor-cell no-mobile">&nbsp;</td>
 				
 				<td class="descriptor-icon-cell descriptor-cell"><img src="../img/Phone-icon.gif" class="descriptor-icon" /></td>
 				<td class="descriptor-text-cell descriptor-cell">
@@ -173,16 +359,29 @@
 					<p class="descriptor-sub">So you don’t have to deal with scammers</p>
 				</td>
 				
-				<td class="descriptor-icon-cell descriptor-cell">&nbsp;</td>
-				<td class="descriptor-text-cell descriptor-cell">&nbsp;</td>
+				<td class="descriptor-icon-cell descriptor-cell no-mobile">&nbsp;</td>
+				<td class="descriptor-text-cell descriptor-cell no-mobile">&nbsp;</td>
 			</tr>
 		</table>
 		
 		<p class="section-kicker large-font">We do this all at times that are convenient for you, when you’re not using your car.</p>
 		<p class="section-kicker large-font">You can keep using it until it’s sold.</p>
-		
-		<div class="section-divider"></div>
-		
+
+    <a href="#get-started" class="internal-link call-to-action-link">
+		<table class="CTA-button-table">
+			<tr>
+				<td class="CTA-appearance CTA-button"><span class="CTA-intro">Sound good?</span><br>Get a free valuation</td>
+			</tr>
+		</table>
+    </a>
+    
+    </div>
+    
+
+    
+<div class="banner-image" id="banner-3"></div>
+    
+<div class="body-container">		
 		<h2 id="what-you-do">What you do</h2>
 	
 		<table id="what-you-do-table" border="0" cellspacing="0" cellpadding="0" class="centered-table">
@@ -203,189 +402,13 @@
 	
 		<p class="section-kicker large-font"><strong>That’s it.</strong></p><p class="section-kicker large-font">If we can’t sell your car for a price you’re happy with, you don’t pay us anything</p>
 		
-		<?php
-		
-			// Check connection
-			if ($conn) {
-    			
-				$SQLCommand = "SELECT * FROM dkltdnet_driven.testamonials WHERE car=\"".$directory."\"";
-				$result = mysqli_query($conn, $SQLCommand); // This line executes the MySQL query that you typed above
-				
-				$resultsArray = array(); // make a new array to hold all your data
-				
-                $index = 0;
-				while($row = mysqli_fetch_assoc($result))
-				{
-					 $resultsArray[$index] = $row;
-					 $index++;
-				}
-				
-				$numEntries = $index;
-				
-				$customerName="";
-				$testamonial="";
-				$imgURL="";
-				$printTestamonials = false;
-				
-				if($numEntries > 0)
-				{
-					$randomIndex = rand(1,$numEntries) - 1;
-				
-                    $customerName = $resultsArray[$randomIndex]['customer_desc']; 
-					$testamonial = $resultsArray[$randomIndex]['testamonial'];
-					$imgURL = "../img/testamonials/".$resultsArray[$randomIndex]['testamonial_id'].".gif";
-					$printTestamonials = true;
-				}
-				else
-				{
-					$SQLCommand = "SELECT * FROM dkltdnet_driven.testamonials";
-					$result = mysqli_query($conn, $SQLCommand); // This line executes the MySQL query that you typed above
-					
-					$genResultsArray = array(); // make a new array to hold all your data
-					
-					$index = 0;
-					while($row = mysqli_fetch_assoc($result))
-					{
-						 $genResultsArray[$index] = $row;
-						 $index++;
-					}
-					
-					$numEntries = $index;
-					
-					if($numEntries > 0)
-					{
-						$randomIndex = rand(1,$numEntries) - 1;
-					
-                        $customerName = $genResultsArray[$randomIndex]['customer_desc_generic']; 
-						$testamonial = $genResultsArray[$randomIndex]['testamonial'];
-						$imgURL = "../img/testamonials/".$genResultsArray[$randomIndex]['testamonial_id'].".gif";
-						
-                        $printTestamonials = true;
-					}
-				}
-				
-				if($printTestamonials)
-				{				
-					
-			?>	
-			
-			<table class="quote-table" width="750" border="0" cellspacing="0" cellpadding="0">
+    <a href="#get-started" class="internal-link call-to-action-link">
+		<table class="CTA-button-table">
 			<tr>
-				<td valign="middle" width="100%">
-					<p class="quote large-font">"<?php echo $testamonial;?>" - <?php echo $customerName;?></p>
-				</td>
-				<td valign="middle" id="testamonial-img-cell"><img src="<?php echo $imgURL;?>" id="testamonial-img"/></td>
-				
+				<td class="CTA-appearance CTA-button"><span class="CTA-intro">Interested?</span><br>Get a free valuation</td>
 			</tr>
-			</table>
-			
-			<?php
-				}
-			mysqli_close($conn);
-			}
-			
-			?>
-		
-		
-		
-		<div class="section-divider"></div>
-		
-		<h2 id="get-started">How do I get started?</h2>
-		
-		<p class="form-preamble large-font">If you’re based in London and your <?php echo $model; ?> is less than 5 years old, we’d love to help you sell it.</p>
-		<p class="form-preamble large-font">You don’t need to commit to anything. Instead, we’ll give you a free quote of how much money we think we could get for you. You can then decide if that sounds a good deal or not.</p>
-
-		<div id="form-header">Get started with a free quote</div>
-		<div id="form-body">
-		
-			<form action="../thankyou.php" method="post" name="register-form" data-parsley-validate>
-			
-			<table border="0" cellspacing="0" cellpadding="0" class="centered-table" id="form-table">
-				<tr>
-				
-					<td colspan="2" class="form-header-cell"><span class="form-heading-number">1.</span><span class="form-heading-text">Tell us about your <?php echo $model; ?></span></td>
-					<td>&nbsp;</td>
-					<td colspan="2" class="form-header-cell"><span class="form-heading-number">2.</span><span class="form-heading-text">Tell us about you</span></td>
-					
-				</tr>
-               	
-				<tr>
-					<td class="form-cell">Reg Number*</td>
-					<td>
-						<input name="reg" type="text" tabindex="1" id="register-form-reg" placeholder="Written on the car. Twice" maxlength="8" data-parsley-required data-parsley-required-message="We need this to tell what car you have" />
-					</td>
-					<td width="50">&nbsp;</td>
-					<td class="form-cell">Your email address*</td>
-					<td>
-						<input name="email" type="text" tabindex="4" id="register-form-email" placeholder="How we get in touch" data-parsley-required data-parsley-type="email" data-parsley-required-message="We need to be able to contact you"/>
-					</td>
-				</tr>
-				<tr>
-					<td class="form-cell">Mileage*</td>
-					<td>
-						<input name="mileage" type="text" tabindex="2" id="register-form-mileage" placeholder="The miles on the clock" maxlength="9" data-parsley-required data-parsley-type="number" data-parsley-required-message="We need this to know how much it's worth"/>
-					</td>
-					<td width="50">&nbsp;</td>
-					<td class="form-cell">Your name*</td>
-					<td>
-						<input name="name" type="text" tabindex="5" id="register-form-name" class="r2" placeholder="What we should call you" data-parsley-required data-parsley-required-message="We need to know what to call you"/>
-					</td>
-				</tr>
-				<tr>
-					<td class="form-cell">Condition*</td>
-					<td class="condition-popup-wrapper">
-						<div id="condition-popup">
-						<span id="condition-popup-header">Your car's condition affects how much cash you'll get. Here's how we work:</span>
-						<p class="condition-popup-p"><strong>Clark Gable: it's a handsome screen idol.</strong> It's got no scrapes or scratches, there are no mechanical problems and you've got a full service history.</p>
-						<p class="condition-popup-p"><strong>Marlon Brando: it's not perfect, but it's pretty close.</strong> It's got the odd scratch or bump, but everything mechanical works well and you've got a full service history to prove it.</p>
-						<p class="condition-popup-p"><strong>Paul Newman: it's lived a little, and you both know it.</strong> It's got a few scratches. It's missing a bit of paint or has one or two mechanical issues, but at least you've got a full service history.</p>
-						<p class="condition-popup-p"><strong>Olly Reed: it's a hellraiser.</strong> It's scratched, there are some mechanical issues you haven't fixed and you're not quite sure where all its service history is. But it gets you from A to B.</p>
-						</div>
-						
-						<select name="condition" tabindex="3" class="empty" id="register-form-condition" data-parsley-required data-parsley-required-message="If you're not sure, go for Paul Newman">
-							
-							<option value="" disabled selected style='display:none;'>The state it's in</option>
-							<option value="Excellent">Clark Gable</option>
-							<option value="Good">Marlon Brando</option>
-							<option value="Average">Paul Newman</option>
-							<option value="Poor">Olly Reed</option>
-							
-						</select>
-					</td>
-					<td width="50">&nbsp;</td>
-					<td class="form-cell">Your postcode*</td>
-					<td>
-						<input name="postcode" type="text" tabindex="6" id="register-form-postcode" placeholder="Where we come to" data-parsley-required data-parsley-required-message="We need to know we can come to you" />
-					</td>
-				</tr>
-				<tr>
-					<td class="form-cell">&nbsp;</td>
-					<td>&nbsp;</td>
-					<td width="50">&nbsp;</td>
-					<td class="form-cell">Your phone number</td>
-					<td>
-						<input name="phone" type="text" tabindex="7" id="register-form-phone" class="r2" placeholder="We won't prank call you" />
-					</td>
-				</tr>
-			</table>
-			
-			<?php 
-			$ref_s = "";
-			if(isset($_GET["ref"]))
-			{
-				$ref_s = $_GET["ref"];
-			}
-			?>
-		
-			<input name="ref" type="hidden" value="<?php echo $ref_s; ?>" />
-			<input name="source" type="hidden" value="<?php echo $model; ?>" />
-
-			
-			<input name="register" type="submit" tabindex="8" id="register-form-button" value="Let's go" class="CTA-appearance"/>
-			
-		</form>
-		
-	</div>
+		</table>
+    </a>		
 	
 	<div class="footer">&copy;&nbsp;Driven Cars Limited&nbsp;&nbsp;&nbsp;<a href="/privacy.html" id="privacy-link">Privacy policy</a></div>	
 		

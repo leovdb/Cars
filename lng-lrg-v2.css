@@ -1,0 +1,169 @@
+@charset utf-8;
+
+h1 {
+font-size:60px;
+}
+
+h2 {
+font-size:37px;
+margin-top: 25px;
+}
+
+h3 {
+font-size:37px;
+}
+
+#logo {
+width:200px;
+}
+
+.body-container {
+width:1640px;
+}
+
+#hero-header-body {
+width:1640px;
+    font-size:23px;
+padding-bottom: 20px;    
+}
+
+.CTA-appearance {
+font-size:30px;
+}
+
+.CTA-button-table {
+margin-bottom: 25px;
+}
+
+#intro-text-container{
+    width: auto;
+}
+
+#what-we-do-table {
+width:1350px;
+}
+
+#what-you-do-table {
+width:900px;
+}
+
+.descriptor-cell {
+padding:10px 5px;
+}
+
+.descriptor-icon-cell {
+width:90px;
+}
+
+.descriptor-text-cell {
+width:340px;
+font-size:18px;
+}
+
+.descriptor-sub {
+margin-top:4px;
+font-size:14px;
+}
+
+.section-kicker {
+margin-top:25px;
+margin-bottom:25px;
+}
+
+.large-font {
+font-size:23px;
+}
+
+#testamonial-img {
+height:150px;
+}
+
+#get-started {
+font-size:50px;
+}
+
+.form-cell {
+width:220px;
+font-size:18px;
+padding-left:10px;
+padding-right: 10px;
+padding-bottom: 8px;
+padding-top: 8px;
+}
+
+#form-table-single-column {
+margin-top:15px;
+margin-bottom:35px;
+}
+
+#condition-popup-header {
+font-size:12px;
+}
+
+.condition-popup-p {
+font-size:10px;
+}
+
+input,select {
+font-size:18px;
+}
+
+.CTA-button {
+font-size:30px;
+}
+
+.descriptor-icon {
+height:80px;
+width:auto;
+}
+
+#testamonial-img-cell {
+width:150px;
+}
+
+input {
+width:230px;
+}
+
+select {
+width:248px;
+}
+
+.form-backing {
+    width: 500px;
+}
+
+#form-body {
+
+    font-size: 24px;
+    line-height: 1.618;
+    
+}
+
+.form-width {
+    vertical-align: top;
+    position: relative;
+    width: 350px;
+}
+
+.banner-image {
+    height:200px;
+}
+
+#banner-1 {
+    height:200px;
+}
+
+#form-wrapper {
+    top: -150px;
+}
+
+
+#intro-text-group {
+    font-size: 23px;
+    padding-right: 5em;
+}
+
+.CTA-intro {
+    font-size: 61.8%;
+}
