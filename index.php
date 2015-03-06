@@ -347,10 +347,10 @@
 <div class="section-container">
 
 	<div class="steps-text steps-text-left" id="steps-3">
-    	<h3 class="steps-header" id="steps-3-header">We find potential buyers, using the UK's most visited online car marketplace
+    	<h3 class="steps-header" id="steps-3-header">We find potential buyers, using the UK's most visited online car marketplaces
       <p class="steps-rollover-text">More details...</p></h3>
       <ul class="steps-detail" id="steps-3-detail">
-        	<li>We use eBay, which has 12m visitors looking for cars each month, to find potential buyers.</li>
+        	<li>We use eBay, Auto Trader and PistonHeads, depending on the likely audience for your car, to find potential buyers.</li>
         	<li>We list your car in a way that shows it at its best.</li>
         	<li>We provide potential buyers with additional information that other sellers do not to get a better price (such as the independent AA report).</li>
         </ul>
@@ -376,8 +376,9 @@
       <p class="steps-rollover-text">More details...</p></h3>
         <ul class="steps-detail" id="steps-4-detail">
         	<li>We speak to everyone who enquires about your car, so you don't have to.</li>
-        	<li>We arrange for serious potential buyers to see your car and test drive it (providing they can show the necessary insurance).</li>
-        	<li>We handle the test drive day. You do not need to be there, all we need is your car.</li>
+        	<li>We arrange for serious potential buyers to see your car and test drive it.</li>
+        	<li>We are insured for test drives, so you don't have to worry about people not having insurance.</li>
+            <li>We handle the test drive day. You do not need to be there, all we need is your car.</li>
 		</ul>
     </div>
     
