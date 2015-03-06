@@ -6,24 +6,36 @@ table, tbody, tr, td {
 
 h1 {
 	font-size: 22px;
-	
 }
 
 h2 {
 	font-size: 24px;
-	
 }
 
 h3 {
-	font-size: 16px;
+	font-size: 14px;
 }
+
 .large-font {
-	font-size: 16px;
+	font-size: 14px;
 }
+
 #hero-header-body {
 	width: 98%;
 	padding-left: 1%;
 	padding-right: 1%;
+}
+
+.intro-headings {
+    width:100%;
+}
+
+.banner-image{
+    height:50px;
+}
+
+#banner-1 {
+    height:50px;
 }
 
 
@@ -151,6 +163,11 @@ h3 {
 	width: 95%;
 }
 #form-table {
+	margin-top: 0px;
+	width: 100%;
+}
+
+#form-table-single-column {
 	margin-top: 0px;
 	width: 100%;
 }
