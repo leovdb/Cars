@@ -1,6 +1,6 @@
-RewriteEngine on
-CheckSpelling on
+#RewriteEngine on
+#CheckSpelling on
 
-RewriteRule ^[^.\/]+$ /
+#RewriteRule ^[^.\/]+$ /
 
 DirectoryIndex index.php
